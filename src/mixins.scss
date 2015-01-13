@@ -44,21 +44,21 @@ $class-prefix: "u-";
 
 	/* --- Display --- */
 
-	[#{$class-prefix}#{$name}~="block"] {
+	[#{$class-prefix}#{$name}~="display:block"] {
 		display: block;
 	}
 
 	[#{$class-prefix}#{$name}~="visible"],
-	[#{$class-prefix}#{$name}~="inline-block"] {
+	[#{$class-prefix}#{$name}~="display:inline-block"] {
 		display: inline-block;
 	}
 
-	[#{$class-prefix}#{$name}~="inline"] {
+	[#{$class-prefix}#{$name}~="display:inline"] {
 		display: inline;
 	}
 
 	[#{$class-prefix}#{$name}~="invisible"],
-	[#{$class-prefix}#{$name}~="hidden"] {
+	[#{$class-prefix}#{$name}~="display:none"] {
 		display: none;
 	}
 
