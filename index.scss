@@ -6,8 +6,9 @@
 
 .grid__unit {
 	display: inline-block;
-	letter-spacing: normal;
 	width: 100%;
+	letter-spacing: normal;
+	vertical-align: top;
 }
 
 /* @media breakpoints using ems are unaffected by `html{font-size: <size>;}` rules - see http://www.filamentgroup.com/lab/how-we-learned-to-leave-body-font-size-alone.html */
