@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../index.css"/>
+    <style>
+
+        .grid__unit {
+            box-sizing: border-box;
+            padding: 1em;
+            border: 1px solid #aaa;
+            background-color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h4>Responsive - <small>different widths at <code>xs</code> and <code>sm</code></small></h4>
+
+    <div class="grid">
+        <div class="grid__unit" u-sm="twelve">twelve</div>
+    </div>
+
+    <div class="grid">
+        <div class="grid__unit" u-sm="one">
+            <div u-xs="visible" u-sm="invisible">twelve</div>
+            <div u-xs="invisible" u-sm="visible">one</div>
+        </div>
+        <div class="grid__unit" u-sm="eleven">
+            <div u-xs="visible" u-sm="invisible">twelve</div>
+            <div u-xs="invisible" u-sm="visible">eleven</div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="grid__unit" u-sm="two">
+            <div u-xs="visible" u-sm="invisible">twelve</div>
+            <div u-xs="invisible" u-sm="visible">two</div>
+        </div>
+        <div class="grid__unit" u-sm="ten">
+            <div u-xs="visible" u-sm="invisible">twelve</div>
+            <div u-xs="invisible" u-sm="visible">ten</div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="grid__unit" u-sm="three">
+            <div u-xs="visible" u-sm="invisible">twelve</div>
+            <div u-xs="invisible" u-sm="visible">three</div>
+        </div>
+        <div class="grid__unit" u-sm="nine">
+            <div u-xs="visible" u-sm="invisible">twelve</div>
+            <div u-xs="invisible" u-sm="visible">nine</div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="grid__unit" u-sm="four">
+            <div u-xs="visible" u-sm="invisible">twelve</div>
+            <div u-xs="invisible" u-sm="visible">four</div>
+        </div>
+        <div class="grid__unit" u-sm="eight">
+            <div u-xs="visible" u-sm="invisible">twelve</div>
+            <div u-xs="invisible" u-sm="visible">eight</div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="grid__unit" u-sm="five">
+            <div u-xs="visible" u-sm="invisible">twelve</div>
+            <div u-xs="invisible" u-sm="visible">five</div>
+        </div>
+        <div class="grid__unit" u-sm="seven">
+            <div u-xs="visible" u-sm="invisible">twelve</div>
+            <div u-xs="invisible" u-sm="visible">seven</div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="grid__unit" u-xs="six">
+            six
+        </div>
+        <div class="grid__unit" u-xs="six">
+            six
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="grid">
+        <div class="grid__unit" u-sm="six">six</div>
+        <div class="grid__unit" u-sm="three">three</div>
+        <div class="grid__unit" u-sm="two">two</div>
+        <div class="grid__unit" u-sm="one">one</div>
+    </div>
+
+    <br/>
+
+    <h4>Centered</h4>
+
+    <div class="grid">
+        <div class="grid__unit" u-sm="six centered">six centered</div>
+    </div>
+
+</body>
+</html>

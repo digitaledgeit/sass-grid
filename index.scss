@@ -1,0 +1,17 @@
+@import "./src/mixins";
+
+.grid {
+	letter-spacing: -0.25em;
+}
+
+.grid__unit {
+	display: inline-block;
+	letter-spacing: normal;
+	width: 100%;
+}
+
+/* @media breakpoints using ems are unaffected by `html{font-size: <size>;}` rules - see http://www.filamentgroup.com/lab/how-we-learned-to-leave-body-font-size-alone.html */
+@include grid_breakpoint('xs', em(0px, 16px));
+@include grid_breakpoint('sm', em(569px, 16px));
+@include grid_breakpoint('md', em(768px, 16px));
+@include grid_breakpoint('lg', em(1004px, 16px));

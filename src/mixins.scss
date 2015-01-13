@@ -1,0 +1,71 @@
+
+$class-prefix: "u-";
+
+@function em($px, $base: $base-font-size) {
+	@return ($px / $base) * 1em;
+}
+
+@mixin grid_classes($name) {
+
+	/* --- Width --- */
+
+	$sizes:
+		"one",
+		"two",
+		"three",
+		"four",
+		"five",
+		"six",
+		"seven",
+		"eight",
+		"nine",
+		"ten",
+		"eleven",
+		"tweleve"
+	;
+
+	@each $size in $sizes {
+
+		$i: index($sizes, $size);
+
+		[#{$class-prefix}#{$name}~="#{$size}"] {
+			width: percentage($i/12);
+		}
+
+	}
+
+	/* --- Position --- */
+
+	[#{$class-prefix}#{$name}~="centered"] {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* --- Display --- */
+
+	[#{$class-prefix}#{$name}~="visible"],
+	[#{$class-prefix}#{$name}~="block"] {
+		display: block;
+	}
+
+	[#{$class-prefix}#{$name}~="inline-block"] {
+		display: inline-block;
+	}
+
+	[#{$class-prefix}#{$name}~="inline"] {
+		display: inline;
+	}
+
+	[#{$class-prefix}#{$name}~="invisible"],
+	[#{$class-prefix}#{$name}~="hidden"] {
+		display: none;
+	}
+
+}
+
+@mixin grid_breakpoint($name, $breakpoint) {
+	@media (min-width: $breakpoint) {
+		@include grid_classes($name);
+	}
+}
