@@ -44,11 +44,11 @@ $class-prefix: "u-";
 
 	/* --- Display --- */
 
-	[#{$class-prefix}#{$name}~="visible"],
 	[#{$class-prefix}#{$name}~="block"] {
 		display: block;
 	}
 
+	[#{$class-prefix}#{$name}~="visible"],
 	[#{$class-prefix}#{$name}~="inline-block"] {
 		display: inline-block;
 	}
