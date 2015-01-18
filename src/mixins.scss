@@ -5,6 +5,64 @@ $class-prefix: "u-";
 	@return ($px / $base) * 1em;
 }
 
+@mixin spacing_classes($name) {
+
+	$sizes:
+		1, 2, 3, 4
+	;
+
+	$properties: (
+		'l': 'left',
+		'r': 'right',
+		't': 'top',
+		'b': 'bottom',
+	);
+
+	@each $size in $sizes {
+
+		/* margin */
+
+		[#{$class-prefix}#{$name}~=mx#{$size}] {
+			margin-left: ($size) * 1rem;
+			margin-right: ($size) * 1rem;
+		}
+
+		[#{$class-prefix}#{$name}~=my#{$size}] {
+			margin-top: ($size) * 1rem;
+			margin-bottom: ($size) * 1rem;
+		}
+
+		@each $key, $property in $properties {
+
+			[#{$class-prefix}#{$name}~=m#{$key}#{$size}] {
+				margin-#{$property}: ($size) * 1rem;
+			}
+
+		}
+
+		/* padding */
+
+		[#{$class-prefix}#{$name}~=px#{$size}] {
+			padding-left: ($size) * 1rem;
+			padding-right: ($size) * 1rem;
+		}
+
+		[#{$class-prefix}#{$name}~=py#{$size}] {
+			padding-top: ($size) * 1rem;
+			padding-bottom: ($size) * 1rem;
+		}
+
+		@each $key, $property in $properties {
+
+			[#{$class-prefix}#{$name}~=p#{$key}#{$size}] {
+				padding-#{$property}: ($size) * 1rem;
+			}
+
+		}
+	}
+
+}
+
 @mixin grid_classes($name) {
 
 	/* --- Width --- */
@@ -33,6 +91,8 @@ $class-prefix: "u-";
 		}
 
 	}
+
+	@include spacing_classes($name);
 
 	/* --- Position --- */
 
