@@ -12,10 +12,10 @@ $class-prefix: "u-";
 	;
 
 	$properties: (
-		'l': 'left',
-		'r': 'right',
-		't': 'top',
-		'b': 'bottom',
+		('l', 'left')
+		('r', 'right')
+		('t', 'top')
+		('b', 'bottom')
 	);
 
 	@each $size in $sizes {
@@ -32,10 +32,13 @@ $class-prefix: "u-";
 			margin-bottom: ($size) * 1rem;
 		}
 
-		@each $key, $property in $properties {
+		@each $i in $properties {
 
-			[#{$class-prefix}#{$name}~=m#{$key}#{$size}] {
-				margin-#{$property}: ($size) * 1rem;
+			$short-name: nth($i, 1);
+			$property-name: nth($i, 2);
+
+			[#{$class-prefix}#{$name}~=m#{$short-name}#{$size}] {
+				margin-#{$property-name}: ($size) * 1rem;
 			}
 
 		}
@@ -52,13 +55,17 @@ $class-prefix: "u-";
 			padding-bottom: ($size) * 1rem;
 		}
 
-		@each $key, $property in $properties {
+		@each $i in $properties {
 
-			[#{$class-prefix}#{$name}~=p#{$key}#{$size}] {
-				padding-#{$property}: ($size) * 1rem;
+			$short-name: nth($i, 1);
+			$property-name: nth($i, 2);
+
+			[#{$class-prefix}#{$name}~=p#{$short-name}#{$size}] {
+				padding-#{$property-name}: ($size) * 1rem;
 			}
 
 		}
+
 	}
 
 }
