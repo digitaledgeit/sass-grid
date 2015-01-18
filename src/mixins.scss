@@ -129,6 +129,20 @@ $class-prefix: "u-";
 		display: none;
 	}
 
+	/* --- Text --- */
+
+	[#{$class-prefix}#{$name}~="text:left"] {
+		text-align: left;
+	}
+
+	[#{$class-prefix}#{$name}~="text:center"] {
+		text-align: center;
+	}
+
+	[#{$class-prefix}#{$name}~="text:right"] {
+		text-align: right;
+	}
+
 }
 
 @mixin grid_breakpoint($name, $breakpoint) {
