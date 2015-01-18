@@ -8,7 +8,7 @@ $class-prefix: "u-";
 @mixin spacing_classes($name) {
 
 	$sizes:
-		1, 2, 3, 4
+		0, 1, 2, 3, 4
 	;
 
 	$properties: (
