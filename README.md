@@ -1,24 +1,27 @@
 # grid
 
-A responsive grid
+A responsive grid.
 
 ## Installation
-
-### DuoJS
-
-    @import "digitaledgeit/css-grid";
 
 ### Component
 
     composer install digitaledgeit/css-grid
     
+### DuoJS
+
+In a stylesheet:
+
+    @import "digitaledgeit/css-grid";
+
+    
 ## Usage
     
     <div class="grid">
-        <div class="grid__unit" u-xs="twelve" u-sm="six">100% for extra-small devices but 50% for all other devices</div>
-        <div class="grid__unit" u-xs="hidden" u-sm="three">hidden on extra-small devices but 25% for all other devices</div>
-        <div class="grid__unit" u-xs="hidden" u-sm="two">hidden on extra-small devices but 16% for all other devices</div>
-        <div class="grid__unit" u-xs="hidden" u-sm="one">hidden on extra-small devices but 8% for all other devices</div>
+        <div class="grid__unit" g-xs="twelve" g-sm="six">100% for extra-small devices but 50% for all other devices</div>
+        <div class="grid__unit" g-xs="hidden" g-sm="three">hidden on extra-small devices but 25% for all other devices</div>
+        <div class="grid__unit" g-xs="hidden" g-sm="two">hidden on extra-small devices but 16% for all other devices</div>
+        <div class="grid__unit" g-xs="hidden" g-sm="one">hidden on extra-small devices but 8% for all other devices</div>
     </div>
 
 ## Breakpoints
@@ -36,7 +39,11 @@ A responsive grid
     
 ## Notes
 
-Why 12 columns? A number easily divisible by many numbers - 2, 3, 4, 6
+#### Why 12 columns? 
+Twelve is easily divisible by lots of numbers e.g. 2, 3, 4, 6
+
+#### Why not use fractions or percentages? 
+Because that would require a lot of selectors, e.g. 1/1, 1/2, 1/3, 2/3, etc 
     
 ## License
 
