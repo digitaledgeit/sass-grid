@@ -6,6 +6,7 @@
 
 .grid__unit {
 	display: inline-block;
+	box-sizing: border-box;
 	width: 100%;
 	letter-spacing: normal;
 	vertical-align: top;

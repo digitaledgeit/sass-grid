@@ -11,7 +11,6 @@
         }
 
         .grid__unit {
-            box-sizing: border-box;
             padding: 1em;
             border: 1px solid #aaa;
             background-color: #ccc;
@@ -24,69 +23,69 @@
     <h4>Responsive - <small>different widths at <code>xs</code> and <code>sm</code></small></h4>
 
     <div class="grid">
-        <div class="grid__unit" u-sm="twelve">twelve</div>
+        <div class="grid__unit" g-sm="twelve">twelve</div>
     </div>
 
     <div class="grid">
-        <div class="grid__unit" u-sm="one">
-            <div u-xs="visible" u-sm="invisible">twelve</div>
-            <div u-xs="invisible" u-sm="visible">one</div>
+        <div class="grid__unit" g-sm="one">
+            <div g-xs="visible" g-sm="invisible">twelve</div>
+            <div g-xs="invisible" g-sm="visible">one</div>
         </div>
-        <div class="grid__unit" u-sm="eleven">
-            <div u-xs="visible" u-sm="invisible">twelve</div>
-            <div u-xs="invisible" u-sm="visible">eleven</div>
-        </div>
-    </div>
-
-    <div class="grid">
-        <div class="grid__unit" u-sm="two">
-            <div u-xs="visible" u-sm="invisible">twelve</div>
-            <div u-xs="invisible" u-sm="visible">two</div>
-        </div>
-        <div class="grid__unit" u-sm="ten">
-            <div u-xs="visible" u-sm="invisible">twelve</div>
-            <div u-xs="invisible" u-sm="visible">ten</div>
+        <div class="grid__unit" g-sm="eleven">
+            <div g-xs="visible" g-sm="invisible">twelve</div>
+            <div g-xs="invisible" g-sm="visible">eleven</div>
         </div>
     </div>
 
     <div class="grid">
-        <div class="grid__unit" u-sm="three">
-            <div u-xs="visible" u-sm="invisible">twelve</div>
-            <div u-xs="invisible" u-sm="visible">three</div>
+        <div class="grid__unit" g-sm="two">
+            <div g-xs="visible" g-sm="invisible">twelve</div>
+            <div g-xs="invisible" g-sm="visible">two</div>
         </div>
-        <div class="grid__unit" u-sm="nine">
-            <div u-xs="visible" u-sm="invisible">twelve</div>
-            <div u-xs="invisible" u-sm="visible">nine</div>
-        </div>
-    </div>
-
-    <div class="grid">
-        <div class="grid__unit" u-sm="four">
-            <div u-xs="visible" u-sm="invisible">twelve</div>
-            <div u-xs="invisible" u-sm="visible">four</div>
-        </div>
-        <div class="grid__unit" u-sm="eight">
-            <div u-xs="visible" u-sm="invisible">twelve</div>
-            <div u-xs="invisible" u-sm="visible">eight</div>
+        <div class="grid__unit" g-sm="ten">
+            <div g-xs="visible" g-sm="invisible">twelve</div>
+            <div g-xs="invisible" g-sm="visible">ten</div>
         </div>
     </div>
 
     <div class="grid">
-        <div class="grid__unit" u-sm="five">
-            <div u-xs="visible" u-sm="invisible">twelve</div>
-            <div u-xs="invisible" u-sm="visible">five</div>
+        <div class="grid__unit" g-sm="three">
+            <div g-xs="visible" g-sm="invisible">twelve</div>
+            <div g-xs="invisible" g-sm="visible">three</div>
         </div>
-        <div class="grid__unit" u-sm="seven">
-            <div u-xs="visible" u-sm="invisible">twelve</div>
-            <div u-xs="invisible" u-sm="visible">seven</div>
+        <div class="grid__unit" g-sm="nine">
+            <div g-xs="visible" g-sm="invisible">twelve</div>
+            <div g-xs="invisible" g-sm="visible">nine</div>
         </div>
     </div>
 
     <div class="grid">
-        <div class="grid__unit" u-xs="six">
+        <div class="grid__unit" g-sm="four">
+            <div g-xs="visible" g-sm="invisible">twelve</div>
+            <div g-xs="invisible" g-sm="visible">four</div>
+        </div>
+        <div class="grid__unit" g-sm="eight">
+            <div g-xs="visible" g-sm="invisible">twelve</div>
+            <div g-xs="invisible" g-sm="visible">eight</div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="grid__unit" g-sm="five">
+            <div g-xs="visible" g-sm="invisible">twelve</div>
+            <div g-xs="invisible" g-sm="visible">five</div>
+        </div>
+        <div class="grid__unit" g-sm="seven">
+            <div g-xs="visible" g-sm="invisible">twelve</div>
+            <div g-xs="invisible" g-sm="visible">seven</div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="grid__unit" g-xs="six">
             six
         </div>
-        <div class="grid__unit" u-xs="six">
+        <div class="grid__unit" g-xs="six">
             six
         </div>
     </div>
@@ -94,10 +93,10 @@
     <br/>
 
     <div class="grid">
-        <div class="grid__unit" u-sm="six">six</div>
-        <div class="grid__unit" u-sm="three">three</div>
-        <div class="grid__unit" u-sm="two">two</div>
-        <div class="grid__unit" u-sm="one">one</div>
+        <div class="grid__unit" g-sm="six">six</div>
+        <div class="grid__unit" g-sm="three">three</div>
+        <div class="grid__unit" g-sm="two">two</div>
+        <div class="grid__unit" g-sm="one">one</div>
     </div>
 
     <br/>
@@ -105,7 +104,7 @@
     <h4>Centered</h4>
 
     <div class="grid">
-        <div class="grid__unit" u-sm="six centered">six centered</div>
+        <div class="grid__unit" g-sm="six centered">six centered</div>
     </div>
 
 </body>
