@@ -1,7 +1,5 @@
 .grid {
-  font-size: 0;
-  text-align: justify;
-  text-justify: distribute-all-lines; }
+  font-size: 0; }
 
 .grid__unit {
   display: inline-block;

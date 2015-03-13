@@ -8,7 +8,7 @@
 @import "lib/visibility";
 
 .grid {
-  font-size: 0;
+  font-size: 0; //note: tried using letter-spacing like the current nib grid but it leaves inconsistent spacing between columns
 }
 
 .grid__unit {
