@@ -46,7 +46,12 @@ Twelve is easily divisible by lots of numbers e.g. 2, 3, 4, 6
 
 #### Why not use fractions or percentages? 
 Because that would require a lot of selectors, e.g. 1/1, 1/2, 1/3, 2/3, etc 
-    
+
+
+## TODO
+
+Provide a stylesheet for IE<=8 to provide the desktop equivalent
+
 ## License
 
 The MIT License (MIT)
