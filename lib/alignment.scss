@@ -1,0 +1,22 @@
+
+//
+/// Align grid columns
+/// @param {String} $breakpoint - The breakpoint name e.g. "xs"
+//
+@mixin grid_alignment($breakpoint) {
+
+  [#{$grid_prefix}#{$breakpoint}~="align:left"] { //FIXME:
+//    float: left;
+  }
+
+  [#{$grid_prefix}#{$breakpoint}~="align:center"] { //FIXME:
+//    display: block;
+//    margin-left: auto;
+//    margin-right: auto;
+  }
+
+  [#{$grid_prefix}#{$breakpoint}~="align:right"] { //FIXME:
+//    float: right;
+  }
+
+}

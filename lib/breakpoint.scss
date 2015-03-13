@@ -1,0 +1,10 @@
+
+//
+/// Wrap content in a pre-defined grid breakpoint
+/// @param {String} $name - The breakpoint name e.g. "xs"
+//
+@mixin grid_breakpoint($name) {
+  @include breakpoint(map-get($grid_breakpoints, $name)) {
+    @content
+  }
+}

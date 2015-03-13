@@ -3,109 +3,181 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="../index.css"/>
+
     <style>
 
         body {
-            border: 1px solid red;
+            font-family: sans-serif;
         }
 
         .grid__unit {
-            padding: 1em;
-            border: 1px solid #aaa;
-            background-color: #ccc;
+            min-height: 3em;
+            line-height: 3em;
+            border: 1px solid #fff;
+            background: #ABD5FF;
+            text-align: center;
         }
 
     </style>
+    <link rel="stylesheet" href="../index.css"/>
+
 </head>
 <body>
 
-    <h4>Responsive - <small>different widths at <code>xs</code> and <code>sm</code></small></h4>
+    <h1>Grid</h1>
 
-    <div class="grid">
-        <div class="grid__unit" g-sm="twelve">twelve</div>
-    </div>
+    <section>
 
-    <div class="grid">
-        <div class="grid__unit" g-sm="one">
-            <div g-xs="visible" g-sm="invisible">twelve</div>
-            <div g-xs="invisible" g-sm="visible">one</div>
-        </div>
-        <div class="grid__unit" g-sm="eleven">
-            <div g-xs="visible" g-sm="invisible">twelve</div>
-            <div g-xs="invisible" g-sm="visible">eleven</div>
-        </div>
-    </div>
+        <p>The grid consists of twelve fluid columns at each breakpoint.</p>
 
-    <div class="grid">
-        <div class="grid__unit" g-sm="two">
-            <div g-xs="visible" g-sm="invisible">twelve</div>
-            <div g-xs="invisible" g-sm="visible">two</div>
+        <div class="grid">
+            <div class="grid__unit" g-xs="cols:1">1</div>
+            <div class="grid__unit" g-xs="cols:1">2</div>
+            <div class="grid__unit" g-xs="cols:1">3</div>
+            <div class="grid__unit" g-xs="cols:1">4</div>
+            <div class="grid__unit" g-xs="cols:1">5</div>
+            <div class="grid__unit" g-xs="cols:1">6</div>
+            <div class="grid__unit" g-xs="cols:1">7</div>
+            <div class="grid__unit" g-xs="cols:1">8</div>
+            <div class="grid__unit" g-xs="cols:1">9</div>
+            <div class="grid__unit" g-xs="cols:1">10</div>
+            <div class="grid__unit" g-xs="cols:1">11</div>
+            <div class="grid__unit" g-xs="cols:1">12</div>
         </div>
-        <div class="grid__unit" g-sm="ten">
-            <div g-xs="visible" g-sm="invisible">twelve</div>
-            <div g-xs="invisible" g-sm="visible">ten</div>
-        </div>
-    </div>
 
-    <div class="grid">
-        <div class="grid__unit" g-sm="three">
-            <div g-xs="visible" g-sm="invisible">twelve</div>
-            <div g-xs="invisible" g-sm="visible">three</div>
-        </div>
-        <div class="grid__unit" g-sm="nine">
-            <div g-xs="visible" g-sm="invisible">twelve</div>
-            <div g-xs="invisible" g-sm="visible">nine</div>
-        </div>
-    </div>
+        <code>
+            <pre>
+            &lt;div class="grid">
+                &lt;div class="grid__unit" g-xs="cols:1">&lt;/div>
+                &hellip;
+            &lt;/div>
+            </pre>
+        </code>
 
-    <div class="grid">
-        <div class="grid__unit" g-sm="four">
-            <div g-xs="visible" g-sm="invisible">twelve</div>
-            <div g-xs="invisible" g-sm="visible">four</div>
+    </section>
+
+    <section>
+
+        <p>Grid units can span 2, 3 or 4 columns.</p>
+
+        <div class="grid">
+            <div class="grid__unit" g-xs="cols:6">6</div>
+            <div class="grid__unit" g-xs="cols:6">6</div>
         </div>
-        <div class="grid__unit" g-sm="eight">
-            <div g-xs="visible" g-sm="invisible">twelve</div>
-            <div g-xs="invisible" g-sm="visible">eight</div>
+        <div class="grid" g-xs="text:center">
+            <div class="grid__unit" g-xs="cols:4">4</div>
+            <div class="grid__unit" g-xs="cols:4">4</div>
+            <div class="grid__unit" g-xs="cols:4">4</div>
         </div>
-    </div>
-
-    <div class="grid">
-        <div class="grid__unit" g-sm="five">
-            <div g-xs="visible" g-sm="invisible">twelve</div>
-            <div g-xs="invisible" g-sm="visible">five</div>
+        <div class="grid" g-xs="text:center">
+            <div class="grid__unit" g-xs="cols:3">3</div>
+            <div class="grid__unit" g-xs="cols:3">3</div>
+            <div class="grid__unit" g-xs="cols:3">3</div>
+            <div class="grid__unit" g-xs="cols:3">3</div>
         </div>
-        <div class="grid__unit" g-sm="seven">
-            <div g-xs="visible" g-sm="invisible">twelve</div>
-            <div g-xs="invisible" g-sm="visible">seven</div>
+
+        <code>
+            <pre>
+            &lt;div class="grid">
+                &lt;div class="grid__unit" g-xs="cols:6">6&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:6">6&lt;/div>
+            &lt;/div>
+            </pre>
+        </code>
+
+    </section>
+
+    <section>
+
+        <p>Grid units can span a different number of columns at each breakpoint.</p>
+
+        <div class="grid" g-xs="text:center">
+            <div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">
+                <span g-xs="visible" g-sm="invisible">12</span>
+                <span g-xs="invisible" g-sm="visible" g-md="invisible">6</span>
+                <span g-xs="invisible" g-md="visible" g-lg="invisible">4</span>
+                <span g-xs="invisible" g-lg="visible">3</span>
+            </div>
+            <div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">
+                <span g-xs="visible" g-sm="invisible">12</span>
+                <span g-xs="invisible" g-sm="visible" g-md="invisible">6</span>
+                <span g-xs="invisible" g-md="visible" g-lg="invisible">4</span>
+                <span g-xs="invisible" g-lg="visible">3</span>
+            </div>
+            <div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">
+                <span g-xs="visible" g-sm="invisible">12</span>
+                <span g-xs="invisible" g-sm="visible" g-md="invisible">6</span>
+                <span g-xs="invisible" g-md="visible" g-lg="invisible">4</span>
+                <span g-xs="invisible" g-lg="visible">3</span>
+            </div>
+            <div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">
+                <span g-xs="visible" g-sm="invisible">12</span>
+                <span g-xs="invisible" g-sm="visible" g-md="invisible">6</span>
+                <span g-xs="invisible" g-md="visible" g-lg="invisible">4</span>
+                <span g-xs="invisible" g-lg="visible">3</span>
+            </div>
         </div>
-    </div>
 
-    <div class="grid">
-        <div class="grid__unit" g-xs="six">
-            six
+        <code>
+            <pre>
+            &lt;div class="grid">
+                &lt;div class="grid__unit" g-xs="cols:12" g-xs="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:12" g-xs="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:12" g-xs="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:12" g-xs="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
+            &lt;/div>
+            </pre>
+        </code>
+
+    </section>
+
+    <section>
+        <h2>Grid utilities</h2>
+
+        <p>Grid units can be hidden at any breakpoint.</p>
+
+        <div class="grid">
+            <div class="grid__unit" g-sm="invisible">visible on mobile</div>
+            <div class="grid__unit" g-xs="invisible" g-sm="visible" g-lg="invisible">visible on tablet</div>
+            <div class="grid__unit" g-xs="invisible" g-lg="visible">visible on destop</div>
         </div>
-        <div class="grid__unit" g-xs="six">
-            six
+
+        <code>
+            <pre>
+            &lt;div class="grid">
+                &lt;div class="grid__unit" g-sm="invisible">visible on mobile &lt;/div>
+                &lt;div class="grid__unit" g-xs="invisible" g-sm="visible" g-lg="invisible">visible on tablet&lt;/div>
+                &lt;div class="grid__unit" g-xs="invisible" g-lg="visible">visible on destop &lt;/div>
+            &lt;/div>
+            </pre>
+        </code>
+
+    </section>
+
+    <section>
+        <h2>Spacing utilities</h2>
+
+    </section>
+
+    <section>
+        <h2>Text utilities</h2>
+
+        <p>Text can be aligned differently at each breakpoint.</p>
+
+        <div class="grid">
+            <div class="grid__unit" g-xs="text:left" g-md="text:center" g-lg="text:right">
+                <span g-xs="visible" g-md="invisible">left</span>
+                <span g-xs="invisible" g-md="visible" g-lg="invisible">center</span>
+                <span g-xs="invisible" g-lg="visible" g-md="invisible">right</span>
+            </div>
         </div>
-    </div>
 
-    <br/>
+    </section>
 
-    <div class="grid">
-        <div class="grid__unit" g-sm="six">six</div>
-        <div class="grid__unit" g-sm="three">three</div>
-        <div class="grid__unit" g-sm="two">two</div>
-        <div class="grid__unit" g-sm="one">one</div>
-    </div>
-
-    <br/>
-
-    <h4>Centered</h4>
-
-    <div class="grid">
-        <div class="grid__unit" g-sm="six centered">six centered</div>
-    </div>
+    <section>
+        <h2>Gotch-yas</h2>
+        <p>The grid units' font size is reset to medium and does not inherit the font size from classes higher up. You need to apply styles.</p>
+    </section>
 
 </body>
 </html>

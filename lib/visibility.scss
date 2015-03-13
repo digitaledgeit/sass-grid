@@ -1,0 +1,13 @@
+
+@mixin grid_visibility($breakpoint) {
+
+  [#{$grid_prefix}#{$breakpoint}~="visible"] {
+    display: inline-block;
+  }
+
+
+  [#{$grid_prefix}#{$breakpoint}~="invisible"] {
+    display: none;
+  }
+
+}

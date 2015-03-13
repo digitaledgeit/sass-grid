@@ -35,7 +35,9 @@ In a stylesheet:
 
 ## Building a custom version
 
-    sassc index.scss > index.css
+Requires sass >=3.4
+
+    sass index.scss > index.css
     
 ## Notes
 

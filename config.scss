@@ -1,0 +1,11 @@
+
+$grid_prefix: "g-";
+
+$grid_columns: 12;
+
+$grid_breakpoints: (
+  "xs": 0px,    //targeting <569px devices (e.g. all iPhones <6)
+  "sm": 569px,  //targeting >=569px devices (e.g. iPhones >=6)
+  "md": 768px,  //targeting >=768px tablets (e.g. portrait iPad)
+  "lg": 1004px  //targeting >=1024px tablets (e.g. landscape iPad) and desktops but leaving room for the scrollbar
+);

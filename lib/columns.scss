@@ -1,0 +1,15 @@
+
+//
+/// Renders the spans for the specified breakpoint e.g. g-xs="span:two"
+/// @param {String} $breakpoint - The breakpoint name
+//
+@mixin grid_columns($breakpoint) {
+  @for $i from 1 through $grid_columns {
+
+    [#{$grid_prefix}#{$breakpoint}~="cols:#{$i}"] {
+      width: percentage($i/12);
+    }
+
+  }
+}
+

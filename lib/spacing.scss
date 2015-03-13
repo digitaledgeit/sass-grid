@@ -1,0 +1,65 @@
+
+@mixin grid_spacing($breakpoint) {
+
+  $sizes:
+    0, 1, 2, 3, 4, 5, 6
+  ;
+
+  $grid_spacing_properties: (
+    ('l', 'left')
+    ('r', 'right')
+    ('t', 'top')
+    ('b', 'bottom')
+  );
+
+  @each $size in $sizes {
+
+    /* --- margin --- */
+
+    [#{$grid_prefix}#{$breakpoint}~=mx#{$size}] {
+      margin-left: ($size) * 1rem;
+      margin-right: ($size) * 1rem;
+    }
+
+    [#{$grid_prefix}#{$breakpoint}~=my#{$size}] {
+      margin-top: ($size) * 1rem;
+      margin-bottom: ($size) * 1rem;
+    }
+
+    @each $i in $grid_spacing_properties {
+
+      $short-name: nth($i, 1);
+      $property-name: nth($i, 2);
+
+      [#{$grid_prefix}#{$breakpoint}~=m#{$short-name}#{$size}] {
+        margin-#{$property-name}: ($size) * 1rem;
+      }
+
+    }
+
+    /* --- padding --- */
+
+    [#{$grid_prefix}#{$breakpoint}~=px#{$size}] {
+      padding-left: ($size) * 1rem;
+      padding-right: ($size) * 1rem;
+    }
+
+    [#{$grid_prefix}#{$breakpoint}~=py#{$size}] {
+      padding-top: ($size) * 1rem;
+      padding-bottom: ($size) * 1rem;
+    }
+
+    @each $i in $grid_spacing_properties {
+
+      $short-name: nth($i, 1);
+      $property-name: nth($i, 2);
+
+      [#{$grid_prefix}#{$breakpoint}~=p#{$short-name}#{$size}] {
+        padding-#{$property-name}: ($size) * 1rem;
+      }
+
+    }
+
+  }
+
+}

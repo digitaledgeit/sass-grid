@@ -1,19 +1,39 @@
-@import "./src/mixins";
+@import "config";
+@import "lib/mixins";
+@import "lib/alignment";
+@import "lib/breakpoint";
+@import "lib/columns";
+@import "lib/spacing";
+@import "lib/text";
+@import "lib/visibility";
 
 .grid {
-	letter-spacing: -0.26em;
+  font-size: 0;
 }
 
 .grid__unit {
-	display: inline-block;
-	box-sizing: border-box;
-	width: 100%;
-	letter-spacing: normal;
-	vertical-align: top;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: medium;
+  vertical-align: top;
 }
 
-/* @media breakpoints using ems are unaffected by `html{font-size: <size>;}` rules - see http://www.filamentgroup.com/lab/how-we-learned-to-leave-body-font-size-alone.html */
-@include grid_breakpoint('xs', em(0px, 16px));
-@include grid_breakpoint('sm', em(569px, 16px));
-@include grid_breakpoint('md', em(768px, 16px));
-@include grid_breakpoint('lg', em(1004px, 16px));
+@mixin grid_at($breakpoint) {
+  @include grid_breakpoint($breakpoint) {
+
+	@include grid_columns($breakpoint);
+    @include grid_alignment($breakpoint);
+	@include grid_visibility($breakpoint);
+
+    //not really part of a grid - but very helpful
+    @include grid_text($breakpoint);
+    @include grid_spacing($breakpoint);
+
+  }
+}
+
+@include grid_at("xs");
+@include grid_at("sm");
+@include grid_at("md");
+@include grid_at("lg");
