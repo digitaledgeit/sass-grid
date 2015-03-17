@@ -18,10 +18,10 @@ In a stylesheet:
 ## Usage
     
     <div class="grid">
-        <div class="grid__unit" g-xs="twelve" g-sm="six">100% for extra-small devices but 50% for all other devices</div>
-        <div class="grid__unit" g-xs="hidden" g-sm="three">hidden on extra-small devices but 25% for all other devices</div>
-        <div class="grid__unit" g-xs="hidden" g-sm="two">hidden on extra-small devices but 16% for all other devices</div>
-        <div class="grid__unit" g-xs="hidden" g-sm="one">hidden on extra-small devices but 8% for all other devices</div>
+        <div class="grid__unit" g-xs="cols:12" g-sm="cols:6">100% for extra-small devices but 50% for all other devices</div>
+        <div class="grid__unit" g-xs="invisible" g-sm="cols:3 visible">hidden on extra-small devices but 25% for all other devices</div>
+        <div class="grid__unit" g-xs="invisible" g-sm="cols:2 visible">hidden on extra-small devices but 16% for all other devices</div>
+        <div class="grid__unit" g-xs="invisible" g-sm="cols:1 visible">hidden on extra-small devices but 8% for all other devices</div>
     </div>
 
 ## Breakpoints
