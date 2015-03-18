@@ -13,16 +13,18 @@ A responsive grid.
 In a stylesheet:
 
     @import "digitaledgeit/css-grid";
-
-    
+   
 ## Usage
     
-    <div class="grid">
-        <div class="grid__unit" g-xs="cols:12" g-sm="cols:6">100% for extra-small devices but 50% for all other devices</div>
-        <div class="grid__unit" g-xs="invisible" g-sm="cols:3 visible">hidden on extra-small devices but 25% for all other devices</div>
-        <div class="grid__unit" g-xs="invisible" g-sm="cols:2 visible">hidden on extra-small devices but 16% for all other devices</div>
-        <div class="grid__unit" g-xs="invisible" g-sm="cols:1 visible">hidden on extra-small devices but 8% for all other devices</div>
-    </div>
+    <html class="flexbox">
+    ...
+    
+        <div class="grid">
+            <div class="grid__unit" g-xs="cols:12" g-sm="cols:6">100% for extra-small devices but 50% for all other devices</div>
+            <div class="grid__unit" g-xs="invisible" g-sm="cols:3 visible">hidden on extra-small devices but 25% for all other devices</div>
+            <div class="grid__unit" g-xs="invisible" g-sm="cols:2 visible">hidden on extra-small devices but 16% for all other devices</div>
+            <div class="grid__unit" g-xs="invisible" g-sm="cols:1 visible">hidden on extra-small devices but 8% for all other devices</div>
+        </div>
 
 ## Breakpoints
 

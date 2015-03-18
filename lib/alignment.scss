@@ -5,28 +5,61 @@
 //
 @mixin grid_alignment($breakpoint) {
 
-  .flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:left"] { //FIXME:
+	/* ====== Horizontal Align ====== */
+
+	/* --- halign:left --- */
+
+  .flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:left"] {
 	  justify-content: flex-start;
   }
 
-	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:center"] { //FIXME:
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:left"][#{$grid_prefix}#{$breakpoint}~="order:reverse"] {
+		justify-content: flex-end; //when the ordering is reversed, so is the alignment
+	}
+
+	.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:left"] {
+		text-align: left;
+	}
+
+	/* --- halign:center --- */
+
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:center"],
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:center"][#{$grid_prefix}#{$breakpoint}~="order:reverse"] {
 		justify-content: center;
   }
 
-	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:right"] { //FIXME:
+	.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:center"] {
+		text-align: center;
+	}
+
+	/* --- halign:right --- */
+
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:right"] {
 	  justify-content: flex-end;
   }
 
-	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:top"] { //FIXME:
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:right"][#{$grid_prefix}#{$breakpoint}~="order:reverse"] {
+		justify-content: flex-start; //when the ordering is reversed, so is the alignment
+	}
+
+	.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:right"] {
+		text-align: right;
+	}
+
+	/* ====== Vertical Align ====== */
+
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:top"] {
 		justify-content: flex-start;
 	}
 
-	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:middle"] { //FIXME:
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:middle"] {
 		justify-content: center;
 	}
 
-	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:bottom"] { //FIXME:
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:bottom"] {
 		align-items: flex-end;
 	}
+
+	//TODO: spacing - around, between, auto width and... offset?
 
 }

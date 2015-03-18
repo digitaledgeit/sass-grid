@@ -8,11 +8,26 @@
 @import "lib/text";
 @import "lib/visibility";
 
-.grid {
+.flexbox .grid {
+	display: flex;
+	flex: 0 1 auto;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	box-sizing: border-box;
+}
+
+.flexbox .grid__unit {
+	width: 100%; //FIXME: why not working - must be the same as inline
+	flex-basis: 100%;
+	box-sizing: border-box;
+}
+
+.no-flexbox .grid {
   font-size: 0; //note: tried using letter-spacing like the current nib grid but it leaves inconsistent spacing between columns
 }
 
-.grid__unit {
+.no-flexbox .grid__unit {
   display: inline-block;
   box-sizing: border-box;
   width: 100%;

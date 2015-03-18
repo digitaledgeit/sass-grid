@@ -1,12 +1,13 @@
 
 @mixin grid_visibility($breakpoint) {
 
-  [#{$grid_prefix}#{$breakpoint}~="visible"] {
+  .flexbox [#{$grid_prefix}#{$breakpoint}~="visible"],
+  .no-flexbox [#{$grid_prefix}#{$breakpoint}~="visible"] {
     display: inline-block;
   }
 
-
-  [#{$grid_prefix}#{$breakpoint}~="invisible"] {
+	.flexbox [#{$grid_prefix}#{$breakpoint}~="invisible"],
+	.no-flexbox [#{$grid_prefix}#{$breakpoint}~="invisible"] {
     display: none;
   }
 

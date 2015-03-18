@@ -6,9 +6,14 @@
 @mixin grid_columns($breakpoint) {
   @for $i from 1 through $grid_columns {
 
-    [#{$grid_prefix}#{$breakpoint}~="cols:#{$i}"] {
-      width: percentage($i/12);
+    .flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="cols:#{$i}"] {
+      flex-basis: percentage($i/12);
     }
+
+	  [#{$grid_prefix}#{$breakpoint}~="cols:#{$i}"],
+	  .no-flexbox [#{$grid_prefix}#{$breakpoint}~="cols:#{$i}"] {
+		  width: percentage($i/12);
+	  }
 
   }
 }

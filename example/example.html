@@ -18,12 +18,19 @@
             text-align: center;
         }
 
+        .grid-type-toggle {
+            float: right;
+        }
+
     </style>
     <link rel="stylesheet" href="../index.css"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 </head>
 <body>
 
+    <button class="grid-type-toggle js-grid-type-toggle">Inline Block</button>
     <h1>Grid</h1>
 
     <section>
@@ -64,12 +71,12 @@
             <div class="grid__unit" g-xs="cols:6">6</div>
             <div class="grid__unit" g-xs="cols:6">6</div>
         </div>
-        <div class="grid" g-xs="text:center">
+        <div class="grid">
             <div class="grid__unit" g-xs="cols:4">4</div>
             <div class="grid__unit" g-xs="cols:4">4</div>
             <div class="grid__unit" g-xs="cols:4">4</div>
         </div>
-        <div class="grid" g-xs="text:center">
+        <div class="grid">
             <div class="grid__unit" g-xs="cols:3">3</div>
             <div class="grid__unit" g-xs="cols:3">3</div>
             <div class="grid__unit" g-xs="cols:3">3</div>
@@ -91,7 +98,7 @@
 
         <p>Grid units can span a different number of columns at each breakpoint.</p>
 
-        <div class="grid" g-xs="text:center">
+        <div class="grid" g-xs="halign:center">
             <div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">
                 <span g-xs="visible" g-sm="invisible">12</span>
                 <span g-xs="invisible" g-sm="visible" g-md="invisible">6</span>
@@ -155,15 +162,55 @@
     </section>
 
     <section>
-        <h2>Order utilities</h2>
+        <h2>
+            Order utilities
+            <small><small><small>(Flexbox only)</small></small></small>
+        </h2>
 
-        <div class="grid">
-            <div class="grid__unit" g-xs="order:last">A</div>
-            <div class="grid__unit">B</div>
-            <div class="grid__unit">C</div>
-            <div class="grid__unit">D</div>
-            <div class="grid__unit" g-xs="order:first">E</div>
+
+        <p>Grid units can be re-ordered</p>
+
+        <div class="grid" g-xs="halign:center">
+            <div class="grid__unit" g-xs="cols:2 order:last">A</div>
+            <div class="grid__unit" g-xs="cols:2">B</div>
+            <div class="grid__unit" g-xs="cols:2">C</div>
+            <div class="grid__unit" g-xs="cols:2">D</div>
+            <div class="grid__unit" g-xs="cols:2 order:first">E</div>
         </div>
+
+        <code>
+            <pre>
+            &lt;div class="grid">
+                &lt;div class="grid__unit" g-xs="cols:2 order:last">A&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:2">B&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:2">C&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:2">D&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:2 order:first">E&lt;/div>
+            &lt;/div>
+            </pre>
+        </code>
+
+        <p>The grid units can be reversed</p>
+
+        <div class="grid" g-xs="order:reverse halign:center">
+            <div class="grid__unit" g-xs="cols:2">A</div>
+            <div class="grid__unit" g-xs="cols:2">B</div>
+            <div class="grid__unit" g-xs="cols:2">C</div>
+            <div class="grid__unit" g-xs="cols:2">D</div>
+            <div class="grid__unit" g-xs="cols:2">E</div>
+        </div>
+
+        <code>
+            <pre>
+            &lt;div class="grid">
+                &lt;div class="grid__unit" g-xs="cols:2 order:last">A&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:2">B&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:2">C&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:2">D&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:2 order:first">E&lt;/div>
+            &lt;/div>
+            </pre>
+        </code>
 
     </section>
 
@@ -204,6 +251,33 @@
         <h2>Gotch-yas</h2>
         <p>The grid units' font size is reset to medium and does not inherit the font size from classes higher up. You need to apply styles.</p>
     </section>
+
+    <script>
+
+        var
+            html = document.documentElement,
+            gridTypeToggle = document.querySelector('.js-grid-type-toggle');
+        ;
+
+        gridTypeToggle.addEventListener('click', function(event) {
+            console.log('test');
+            if (html.classList.contains('flexbox')) {
+                gridTypeToggle.innerText = 'Switch to Flexbox';
+            } else {
+                gridTypeToggle.innerText = 'Switch to Inline-Block';
+            }
+            html.classList.toggle('flexbox');
+            html.classList.toggle('no-flexbox');
+        });
+
+        if (html.classList.contains('flexbox')) {
+            gridTypeToggle.innerText = 'Switch to Inline-Block';
+        } else {
+            gridTypeToggle.innerText = 'Switch to Flexbox';
+        }
+
+
+    </script>
 
 </body>
 </html>

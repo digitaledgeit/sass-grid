@@ -6,15 +6,16 @@
 @mixin grid_ordering($breakpoint) {
 
 	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="order:reverse"] {
-		order: 1;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
 	}
 
 	.flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="order:first"] {
-		order: 1;
+		order: -1;
 	}
 
 	.flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="order:last"] {
-		flex-direction: row-reverse;
+		order: 12;
 	}
 
 }
