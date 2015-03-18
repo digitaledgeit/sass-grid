@@ -155,6 +155,32 @@
     </section>
 
     <section>
+        <h2>Order utilities</h2>
+
+        <div class="grid">
+            <div class="grid__unit" g-xs="order:last">A</div>
+            <div class="grid__unit">B</div>
+            <div class="grid__unit">C</div>
+            <div class="grid__unit">D</div>
+            <div class="grid__unit" g-xs="order:first">E</div>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Alignment utilities</h2>
+
+        <div class="grid" g-xs="halign:center">
+            <div class="grid__unit" g-xs="text:left px1" g-md="text:center" g-lg="text:right">
+                <span g-xs="visible" g-md="invisible">left</span>
+                <span g-xs="invisible" g-md="visible" g-lg="invisible">center</span>
+                <span g-xs="invisible" g-lg="visible" g-md="invisible">right</span>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
         <h2>Spacing utilities</h2>
 
     </section>

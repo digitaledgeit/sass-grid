@@ -5,18 +5,28 @@
 //
 @mixin grid_alignment($breakpoint) {
 
-  [#{$grid_prefix}#{$breakpoint}~="align:left"] { //FIXME:
-//    float: left;
+  .flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:left"] { //FIXME:
+	  justify-content: flex-start;
   }
 
-  [#{$grid_prefix}#{$breakpoint}~="align:center"] { //FIXME:
-//    display: block;
-//    margin-left: auto;
-//    margin-right: auto;
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:center"] { //FIXME:
+		justify-content: center;
   }
 
-  [#{$grid_prefix}#{$breakpoint}~="align:right"] { //FIXME:
-//    float: right;
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:right"] { //FIXME:
+	  justify-content: flex-end;
   }
+
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:top"] { //FIXME:
+		justify-content: flex-start;
+	}
+
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:middle"] { //FIXME:
+		justify-content: center;
+	}
+
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:bottom"] { //FIXME:
+		align-items: flex-end;
+	}
 
 }

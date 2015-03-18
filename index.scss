@@ -3,6 +3,7 @@
 @import "lib/alignment";
 @import "lib/breakpoint";
 @import "lib/columns";
+@import "lib/ordering";
 @import "lib/spacing";
 @import "lib/text";
 @import "lib/visibility";
@@ -23,7 +24,8 @@
   @include grid_breakpoint($breakpoint) {
 
 	@include grid_columns($breakpoint);
-    @include grid_alignment($breakpoint);
+  @include grid_alignment($breakpoint);
+  @include grid_ordering($breakpoint);
 	@include grid_visibility($breakpoint);
 
     //not really part of a grid - but very helpful
