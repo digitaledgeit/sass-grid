@@ -52,7 +52,11 @@ Because that would require a lot of selectors, e.g. 1/1, 1/2, 1/3, 2/3, etc
 
 ## TODO
 
-Provide a stylesheet for IE<=8 to provide the desktop equivalent
+- distributions - justify-content: space around|between
+- offsets?
+- margins and padding
+- vertical alignment examples
+- Provide a stylesheet for IE<=8 to provide the desktop equivalent
 
 ## License
 

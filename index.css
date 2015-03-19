@@ -40,6 +40,15 @@
 
 /* targeting devices from 0px */
 @media (min-width: 0em) {
+  .flexbox .grid__unit[g-xs~="cols:auto"] {
+    width: auto;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto; }
   .flexbox .grid__unit[g-xs~="cols:1"] {
     -webkit-flex-basis: 8.33333%;
         -ms-flex-preferred-size: 8.33333%;
@@ -406,6 +415,15 @@
 
 /* targeting devices from 569px */
 @media (min-width: 35.5625em) {
+  .flexbox .grid__unit[g-sm~="cols:auto"] {
+    width: auto;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto; }
   .flexbox .grid__unit[g-sm~="cols:1"] {
     -webkit-flex-basis: 8.33333%;
         -ms-flex-preferred-size: 8.33333%;
@@ -772,6 +790,15 @@
 
 /* targeting devices from 768px */
 @media (min-width: 48em) {
+  .flexbox .grid__unit[g-md~="cols:auto"] {
+    width: auto;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto; }
   .flexbox .grid__unit[g-md~="cols:1"] {
     -webkit-flex-basis: 8.33333%;
         -ms-flex-preferred-size: 8.33333%;
@@ -1138,6 +1165,15 @@
 
 /* targeting devices from 1004px */
 @media (min-width: 62.75em) {
+  .flexbox .grid__unit[g-lg~="cols:auto"] {
+    width: auto;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto; }
   .flexbox .grid__unit[g-lg~="cols:1"] {
     -webkit-flex-basis: 8.33333%;
         -ms-flex-preferred-size: 8.33333%;

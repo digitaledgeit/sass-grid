@@ -18,7 +18,7 @@
 }
 
 .flexbox .grid__unit {
-	width: 100%; //FIXME: why not working - must be the same as inline
+	width: 100%;
 	flex-basis: 100%;
 	box-sizing: border-box;
 }

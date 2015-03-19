@@ -22,6 +22,13 @@
             float: right;
         }
 
+        .disclaimer {
+            display: block;
+            float: right;
+            color: pink;
+            font-size: 0.8em;
+        }
+
     </style>
     <link rel="stylesheet" href="../index.css"/>
 
@@ -136,6 +143,15 @@
             </pre>
         </code>
 
+        <span class="disclaimer">(Flexbox only)</span>
+        <p>Grid units can automatically fill the remaining space.</p>
+
+        <div class="grid">
+            <div class="grid__unit" g-xs="cols:2">2</div>
+            <div class="grid__unit" g-xs="cols:auto">auto</div>
+            <div class="grid__unit" g-xs="cols:3">3</div>
+        </div>
+
     </section>
 
     <section>
@@ -163,12 +179,9 @@
             </code>
         </section>
 
-
         <section>
-            <h3>
-                <small class="pull-right"><small><small>(Flexbox only)</small></small></small>
-                Ordering
-            </h3>
+            <span class="disclaimer">(Flexbox only)</span>
+            <h3>Ordering</h3>
 
 
             <p>Grid units can be re-ordered.</p>
