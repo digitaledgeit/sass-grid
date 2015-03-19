@@ -18,8 +18,9 @@
             text-align: center;
         }
 
-        .pull-right {
-            float: right;
+        .grid-type-toggle {
+            position: fixed;
+            right: 1em;
         }
 
         .disclaimer {
@@ -37,7 +38,7 @@
 </head>
 <body>
 
-    <button class="pull-right js-grid-type-toggle">Inline Block</button>
+    <button class="grid-type-toggle js-grid-type-toggle">Inline Block</button>
     <h1>Grid</h1>
 
     <section>
@@ -151,6 +152,16 @@
             <div class="grid__unit" g-xs="cols:auto">auto</div>
             <div class="grid__unit" g-xs="cols:3">3</div>
         </div>
+
+        <code>
+            <pre>
+              &lt;div class="grid">
+                  &lt;div class="grid__unit" g-xs="cols:2">2&lt;/div>
+                  &lt;div class="grid__unit" g-xs="cols:auto">auto&lt;/div>
+                  &lt;div class="grid__unit" g-xs="cols:3">3&lt;/div>
+                &lt;/div>
+            </pre>
+        </code>
 
     </section>
 
