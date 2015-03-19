@@ -18,7 +18,7 @@
             text-align: center;
         }
 
-        .grid-type-toggle {
+        .pull-right {
             float: right;
         }
 
@@ -30,7 +30,7 @@
 </head>
 <body>
 
-    <button class="grid-type-toggle js-grid-type-toggle">Inline Block</button>
+    <button class="pull-right js-grid-type-toggle">Inline Block</button>
     <h1>Grid</h1>
 
     <section>
@@ -141,44 +141,47 @@
     <section>
         <h2>Grid utilities</h2>
 
-        <p>Grid units can be hidden at any breakpoint.</p>
+        <section>
+            <h3>Visibility</h3>
 
-        <div class="grid">
-            <div class="grid__unit" g-sm="invisible">visible on mobile</div>
-            <div class="grid__unit" g-xs="invisible" g-sm="visible" g-lg="invisible">visible on tablet</div>
-            <div class="grid__unit" g-xs="invisible" g-lg="visible">visible on destop</div>
-        </div>
+            <p>Grid units can be hidden at any breakpoint.</p>
 
-        <code>
-            <pre>
-            &lt;div class="grid">
-                &lt;div class="grid__unit" g-sm="invisible">visible on mobile &lt;/div>
-                &lt;div class="grid__unit" g-xs="invisible" g-sm="visible" g-lg="invisible">visible on tablet&lt;/div>
-                &lt;div class="grid__unit" g-xs="invisible" g-lg="visible">visible on destop &lt;/div>
-            &lt;/div>
-            </pre>
-        </code>
+            <div class="grid">
+                <div class="grid__unit" g-sm="invisible">visible on mobile</div>
+                <div class="grid__unit" g-xs="invisible" g-sm="visible" g-lg="invisible">visible on tablet</div>
+                <div class="grid__unit" g-xs="invisible" g-lg="visible">visible on destop</div>
+            </div>
 
-    </section>
-
-    <section>
-        <h2>
-            Order utilities
-            <small><small><small>(Flexbox only)</small></small></small>
-        </h2>
+            <code>
+                <pre>
+                &lt;div class="grid">
+                    &lt;div class="grid__unit" g-sm="invisible">visible on mobile &lt;/div>
+                    &lt;div class="grid__unit" g-xs="invisible" g-sm="visible" g-lg="invisible">visible on tablet&lt;/div>
+                    &lt;div class="grid__unit" g-xs="invisible" g-lg="visible">visible on destop &lt;/div>
+                &lt;/div>
+                </pre>
+            </code>
+        </section>
 
 
-        <p>Grid units can be re-ordered</p>
+        <section>
+            <h3>
+                <small class="pull-right"><small><small>(Flexbox only)</small></small></small>
+                Ordering
+            </h3>
 
-        <div class="grid" g-xs="halign:center">
-            <div class="grid__unit" g-xs="cols:2 order:last">A</div>
-            <div class="grid__unit" g-xs="cols:2">B</div>
-            <div class="grid__unit" g-xs="cols:2">C</div>
-            <div class="grid__unit" g-xs="cols:2">D</div>
-            <div class="grid__unit" g-xs="cols:2 order:first">E</div>
-        </div>
 
-        <code>
+            <p>Grid units can be re-ordered.</p>
+
+            <div class="grid" g-xs="halign:center">
+                <div class="grid__unit" g-xs="cols:2 order:last">A</div>
+                <div class="grid__unit" g-xs="cols:2">B</div>
+                <div class="grid__unit" g-xs="cols:2">C</div>
+                <div class="grid__unit" g-xs="cols:2">D</div>
+                <div class="grid__unit" g-xs="cols:2 order:first">E</div>
+            </div>
+
+            <code>
             <pre>
             &lt;div class="grid">
                 &lt;div class="grid__unit" g-xs="cols:2 order:last">A&lt;/div>
@@ -188,19 +191,19 @@
                 &lt;div class="grid__unit" g-xs="cols:2 order:first">E&lt;/div>
             &lt;/div>
             </pre>
-        </code>
+            </code>
 
-        <p>The grid units can be reversed</p>
+            <p>The grid units can be reversed.</p>
 
-        <div class="grid" g-xs="order:reverse halign:center">
-            <div class="grid__unit" g-xs="cols:2">A</div>
-            <div class="grid__unit" g-xs="cols:2">B</div>
-            <div class="grid__unit" g-xs="cols:2">C</div>
-            <div class="grid__unit" g-xs="cols:2">D</div>
-            <div class="grid__unit" g-xs="cols:2">E</div>
-        </div>
+            <div class="grid" g-xs="order:reverse halign:center">
+                <div class="grid__unit" g-xs="cols:2">A</div>
+                <div class="grid__unit" g-xs="cols:2">B</div>
+                <div class="grid__unit" g-xs="cols:2">C</div>
+                <div class="grid__unit" g-xs="cols:2">D</div>
+                <div class="grid__unit" g-xs="cols:2">E</div>
+            </div>
 
-        <code>
+            <code>
             <pre>
             &lt;div class="grid">
                 &lt;div class="grid__unit" g-xs="cols:2 order:last">A&lt;/div>
@@ -210,46 +213,74 @@
                 &lt;div class="grid__unit" g-xs="cols:2 order:first">E&lt;/div>
             &lt;/div>
             </pre>
-        </code>
+            </code>
 
-    </section>
+        </section>
 
-    <section>
-        <h2>Alignment utilities</h2>
+        <section>
+            <h3>Alignment</h3>
 
-        <div class="grid" g-xs="halign:center">
-            <div class="grid__unit" g-xs="text:left px1" g-md="text:center" g-lg="text:right">
-                <span g-xs="visible" g-md="invisible">left</span>
-                <span g-xs="invisible" g-md="visible" g-lg="invisible">center</span>
-                <span g-xs="invisible" g-lg="visible" g-md="invisible">right</span>
+            <p>Horizontal.</p>
+
+            <div class="grid" g-xs="halign:left">
+                <div class="grid__unit" g-xs="cols:3">align</div>
+                <div class="grid__unit" g-xs="cols:3">left</div>
             </div>
-        </div>
-
-    </section>
-
-    <section>
-        <h2>Spacing utilities</h2>
-
-    </section>
-
-    <section>
-        <h2>Text utilities</h2>
-
-        <p>Text can be aligned differently at each breakpoint.</p>
-
-        <div class="grid">
-            <div class="grid__unit" g-xs="text:left px1" g-md="text:center" g-lg="text:right">
-                <span g-xs="visible" g-md="invisible">left</span>
-                <span g-xs="invisible" g-md="visible" g-lg="invisible">center</span>
-                <span g-xs="invisible" g-lg="visible" g-md="invisible">right</span>
+            <div class="grid" g-xs="halign:center">
+                <div class="grid__unit" g-xs="cols:3">align</div>
+                <div class="grid__unit" g-xs="cols:3">center</div>
             </div>
-        </div>
+            <div class="grid" g-xs="halign:right">
+                <div class="grid__unit" g-xs="cols:3">align</div>
+                <div class="grid__unit" g-xs="cols:3">right</div>
+            </div>
+
+            <code>
+            <pre>
+            &lt;div class="grid" g-xs="halign:left">
+                ...
+            &lt;/div>
+            &lt;div class="grid" g-xs="halign:center">
+                ...
+            &lt;/div>
+            &lt;div class="grid" g-xs="halign:right">
+                ...
+            &lt;/div>
+            </pre>
+            </code>
+
+        </section>
+
+    </section>
+
+    <section>
+        <h2>Generic utilities</h2>
+
+        <section>
+            <h3>Text</h3>
+
+            <p>Text can be aligned differently at each breakpoint.</p>
+
+            <div class="grid">
+                <div class="grid__unit" g-xs="text:left px1" g-md="text:center" g-lg="text:right">
+                    <span g-xs="visible" g-md="invisible">left</span>
+                    <span g-xs="invisible" g-md="visible" g-lg="invisible">center</span>
+                    <span g-xs="invisible" g-lg="visible" g-md="invisible">right</span>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <h3>Margins and padding</h3>
+
+        </section>
 
     </section>
 
     <section>
         <h2>Gotch-yas</h2>
-        <p>With the Inline-Grid, the grid units' font size is reset to medium and does not inherit the font size from classes higher up. You need to apply styles.</p>
+        <p>With the Inline-Block grid, the grid units' font size is reset to medium and does not inherit the font size from classes higher up. You need to apply styles.</p>
     </section>
 
     <script>

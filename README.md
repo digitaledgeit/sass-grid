@@ -39,7 +39,7 @@ In a stylesheet:
 
 Requires sass >=3.4
 
-    sass index.scss > index.css
+    $ gulp
     
 ## Notes
 
