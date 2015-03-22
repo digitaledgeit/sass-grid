@@ -1,6 +1,8 @@
 # grid
 
-A responsive grid.
+A responsive grid. 
+
+Uses flexbox and gracefully degrades to inline-blocks in older browsers.
 
 ## Installation
 
@@ -16,7 +18,7 @@ In a stylesheet:
    
 ## Usage
     
-    <html class="flexbox">
+    <html class="flexbox"><!-- you'll probably use Modernizr and won't need to manually put this class here --!>
     ...
     
         <div class="grid">
@@ -26,6 +28,8 @@ In a stylesheet:
             <div class="grid__unit" g-xs="invisible" g-sm="cols:1 visible">hidden on extra-small devices but 8% for all other devices</div>
         </div>
 
+Find more examples on the [example/example.html](http://digitaledgeit.github.io/css-grid/example/example.html) page.
+
 ## Breakpoints
 
  - xs - target devices >=0px
@@ -33,30 +37,25 @@ In a stylesheet:
  - md - target devices >=769px
  - lg - target devices >=1004px
 
-## Utility classes
+## Building your own grid
 
-## Building a custom version
-
-Requires sass >=3.4
-
-    $ gulp
-    
+1. Requires sass >=3.4
+2. Customise the settings in `config.scss`
+3. Run `npm install`
+4. Run `gulp`
+   
 ## Notes
 
-#### Why 12 columns? 
+### Why 12 columns? 
 Twelve is easily divisible by lots of numbers e.g. 2, 3, 4, 6
-
-#### Why not use fractions or percentages? 
-Because that would require a lot of selectors, e.g. 1/1, 1/2, 1/3, 2/3, etc 
-
 
 ## TODO
 
-- distributions - justify-content: space around|between
+- Test IE
+- mixins
+- margins and padding. in another component?
 - offsets?
-- margins and padding
-- vertical alignment examples
-- Provide a stylesheet for IE<=8 to provide the desktop equivalent
+- Provide a stylesheet for IE<=8 to provide the desktop equivalent?
 
 ## License
 
