@@ -25,8 +25,9 @@
         }
 
         .disclaimer {
+            position: absolute;
             display: block;
-            float: right;
+            right: 1em;
             color: pink;
             font-size: 0.8em;
         }
@@ -62,12 +63,12 @@
         </div>
 
         <code>
-            <pre>
-            &lt;div class="grid">
-                &lt;div class="grid__unit" g-xs="cols:1">&lt;/div>
-                &hellip;
-            &lt;/div>
-            </pre>
+        <pre>
+        &lt;div class="grid">
+            &lt;div class="grid__unit" g-xs="cols:1">&lt;/div>
+            &hellip;
+        &lt;/div>
+        </pre>
         </code>
 
     </section>
@@ -93,12 +94,12 @@
         </div>
 
         <code>
-            <pre>
-            &lt;div class="grid">
-                &lt;div class="grid__unit" g-xs="cols:6">6&lt;/div>
-                &lt;div class="grid__unit" g-xs="cols:6">6&lt;/div>
-            &lt;/div>
-            </pre>
+        <pre>
+        &lt;div class="grid">
+            &lt;div class="grid__unit" g-xs="cols:6">6&lt;/div>
+            &lt;div class="grid__unit" g-xs="cols:6">6&lt;/div>
+        &lt;/div>
+        </pre>
         </code>
 
     </section>
@@ -135,14 +136,14 @@
         </div>
 
         <code>
-            <pre>
-            &lt;div class="grid">
-                &lt;div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
-                &lt;div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
-                &lt;div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
-                &lt;div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
-            &lt;/div>
-            </pre>
+        <pre>
+        &lt;div class="grid">
+            &lt;div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
+            &lt;div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
+            &lt;div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
+            &lt;div class="grid__unit" g-xs="cols:12" g-sm="cols:6" g-md="cols:4" g-lg="cols:3">&lt;/div>
+        &lt;/div>
+        </pre>
         </code>
 
         <span class="disclaimer">(Flexbox only)</span>
@@ -156,14 +157,14 @@
         </div>
 
         <code>
-            <pre>
-              &lt;div class="grid">
-                  &lt;div class="grid__unit" g-xs="cols:2">2&lt;/div>
-                  &lt;div class="grid__unit" g-xs="cols:min">min&lt;/div>
-                &lt;div class="grid__unit" g-xs="cols:max">max&lt;/div>
-                  &lt;div class="grid__unit" g-xs="cols:3">3&lt;/div>
-                &lt;/div>
-            </pre>
+        <pre>
+        &lt;div class="grid">
+            &lt;div class="grid__unit" g-xs="cols:2">2&lt;/div>
+            &lt;div class="grid__unit" g-xs="cols:min">min&lt;/div>
+            &lt;div class="grid__unit" g-xs="cols:max">max&lt;/div>
+            &lt;div class="grid__unit" g-xs="cols:3">3&lt;/div>
+        &lt;/div>
+        </pre>
         </code>
 
     </section>
@@ -183,13 +184,13 @@
             </div>
 
             <code>
-                <pre>
-                &lt;div class="grid">
-                    &lt;div class="grid__unit" g-sm="invisible">visible on mobile &lt;/div>
-                    &lt;div class="grid__unit" g-xs="invisible" g-sm="visible" g-lg="invisible">visible on tablet&lt;/div>
-                    &lt;div class="grid__unit" g-xs="invisible" g-lg="visible">visible on destop &lt;/div>
-                &lt;/div>
-                </pre>
+            <pre>
+            &lt;div class="grid">
+                &lt;div class="grid__unit" g-sm="invisible">visible on mobile &lt;/div>
+                &lt;div class="grid__unit" g-xs="invisible" g-sm="visible" g-lg="invisible">visible on tablet&lt;/div>
+                &lt;div class="grid__unit" g-xs="invisible" g-lg="visible">visible on destop &lt;/div>
+            &lt;/div>
+            </pre>
             </code>
         </section>
 
@@ -245,7 +246,6 @@
         </section>
 
         <section>
-            <span class="disclaimer">(Some alignments only work with Flexbox)</span>
             <h3>Alignment</h3>
 
             <p>Horizontal.</p>
@@ -263,6 +263,24 @@
                 <div class="grid__unit" g-xs="cols:3">right</div>
             </div>
 
+            <br/>
+
+            <div class="grid" g-xs="halign:justify">
+                <div class="grid__unit" g-xs="cols:3">align</div>
+                <div class="grid__unit" g-xs="cols:3">just</div>
+                <div class="grid__unit" g-xs="cols:3">ified</div>
+            </div>
+
+            <br/>
+            <span class="disclaimer">(Behaves the same as halign:justify on Inline-Block)</span>
+            <br/>
+
+            <div class="grid" g-xs="halign:justify-center">
+                <div class="grid__unit" g-xs="cols:3">align</div>
+                <div class="grid__unit" g-xs="cols:3">justify</div>
+                <div class="grid__unit" g-xs="cols:3">center</div>
+            </div>
+
             <code>
             <pre>
             &lt;div class="grid" g-xs="halign:left">
@@ -274,40 +292,49 @@
             &lt;div class="grid" g-xs="halign:right">
                 ...
             &lt;/div>
+            &lt;div class="grid" g-xs="halign:justify">
+                ...
+            &lt;/div>
+            &lt;div class="grid" g-xs="halign:justify-center">
+                ...
+            &lt;/div>
             </pre>
             </code>
 
             <p>Vertical.</p>
 
-            <div class="grid" g-xs="valign:top" style="min-height: 6em; margin-bottom: 1em; border: 1px dotted #ccc;">
+            <div class="grid" g-xs="valign:top" style="min-height: 100px; margin-bottom: 1em; border: 1px dotted #ccc;">
                 <div class="grid__unit" g-xs="cols:6">align</div>
                 <div class="grid__unit" g-xs="cols:6">top</div>
             </div>
-            <div class="grid" g-xs="valign:middle" style="min-height: 6em; margin-bottom: 1em; border: 1px dotted #ccc;">
+            <div class="grid" g-xs="valign:middle" style="min-height: 100px; margin-bottom: 1em; border: 1px dotted #ccc;">
                 <div class="grid__unit" g-xs="cols:6">align</div>
                 <div class="grid__unit" g-xs="cols:6">middle</div>
             </div>
-            <div class="grid" g-xs="valign:bottom" style="min-height: 6em; margin-bottom: 1em; border: 1px dotted #ccc;">
+            <div class="grid" g-xs="valign:bottom" style="min-height: 100px; margin-bottom: 1em; border: 1px dotted #ccc;">
                 <div class="grid__unit" g-xs="cols:6">align</div>
                 <div class="grid__unit" g-xs="cols:6">bottom</div>
             </div>
-            <div class="grid" g-xs="valign:stretch" style="min-height: 10em; border: 1px dotted #ccc;">
+
+            <span class="disclaimer">(Flexbox only)</span>
+            <br/>
+            <div class="grid" g-xs="valign:stretch" style="min-height: 100px; border: 1px dotted #ccc;">
                 <div class="grid__unit" g-xs="cols:6">align</div>
                 <div class="grid__unit" g-xs="cols:6">stretch</div>
             </div>
 
             <code>
             <pre>
-            &lt;div class="grid" g-xs="halign:top">
+            &lt;div class="grid" g-xs="valign:top">
                 ...
             &lt;/div>
-            &lt;div class="grid" g-xs="halign:middle">
+            &lt;div class="grid" g-xs="valign:middle">
                 ...
             &lt;/div>
-            &lt;div class="grid" g-xs="halign:bottom">
+            &lt;div class="grid" g-xs="valign:bottom">
                 ...
             &lt;/div>
-            &lt;div class="grid" g-xs="halign:stretch">
+            &lt;div class="grid" g-xs="valign:stretch">
                 ...
             &lt;/div>
             </pre>
@@ -332,6 +359,14 @@
                     <span g-xs="invisible" g-lg="visible" g-md="invisible">right</span>
                 </div>
             </div>
+
+            <code>
+            <pre>
+            &lt;div class="grid__unit" g-xs="text:left" g-md="text:center" g-lg="text:right">
+                ...
+            &lt;/div>
+            </pre>
+            </code>
 
         </section>
 

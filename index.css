@@ -167,6 +167,29 @@
             justify-content: flex-start; }
   .no-flexbox .grid[g-xs~="halign:right"] {
     text-align: right; }
+  /* --- halign:justify --- */
+  .flexbox .grid[g-xs~="halign:justify"] {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .no-flexbox .grid[g-xs~="halign:justify"] {
+    text-align: justify; }
+  .no-flexbox .grid[g-xs~="halign:justify"]:after {
+    display: inline-block;
+    content: "";
+    width: 100%; }
+  /* --- halign:justify-center --- */
+  .flexbox .grid[g-xs~="halign:justify-center"] {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .no-flexbox .grid[g-xs~="halign:justify-center"] {
+    text-align: justify; }
+  .no-flexbox .grid[g-xs~="halign:justify-center"]:after {
+    display: inline-block;
+    content: "";
+    width: 100%; }
   /* ====== Vertical Align ====== */
   .flexbox .grid[g-xs~="valign:top"] {
     -webkit-box-align: start;
@@ -558,6 +581,29 @@
             justify-content: flex-start; }
   .no-flexbox .grid[g-sm~="halign:right"] {
     text-align: right; }
+  /* --- halign:justify --- */
+  .flexbox .grid[g-sm~="halign:justify"] {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .no-flexbox .grid[g-sm~="halign:justify"] {
+    text-align: justify; }
+  .no-flexbox .grid[g-sm~="halign:justify"]:after {
+    display: inline-block;
+    content: "";
+    width: 100%; }
+  /* --- halign:justify-center --- */
+  .flexbox .grid[g-sm~="halign:justify-center"] {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .no-flexbox .grid[g-sm~="halign:justify-center"] {
+    text-align: justify; }
+  .no-flexbox .grid[g-sm~="halign:justify-center"]:after {
+    display: inline-block;
+    content: "";
+    width: 100%; }
   /* ====== Vertical Align ====== */
   .flexbox .grid[g-sm~="valign:top"] {
     -webkit-box-align: start;
@@ -949,6 +995,29 @@
             justify-content: flex-start; }
   .no-flexbox .grid[g-md~="halign:right"] {
     text-align: right; }
+  /* --- halign:justify --- */
+  .flexbox .grid[g-md~="halign:justify"] {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .no-flexbox .grid[g-md~="halign:justify"] {
+    text-align: justify; }
+  .no-flexbox .grid[g-md~="halign:justify"]:after {
+    display: inline-block;
+    content: "";
+    width: 100%; }
+  /* --- halign:justify-center --- */
+  .flexbox .grid[g-md~="halign:justify-center"] {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .no-flexbox .grid[g-md~="halign:justify-center"] {
+    text-align: justify; }
+  .no-flexbox .grid[g-md~="halign:justify-center"]:after {
+    display: inline-block;
+    content: "";
+    width: 100%; }
   /* ====== Vertical Align ====== */
   .flexbox .grid[g-md~="valign:top"] {
     -webkit-box-align: start;
@@ -1340,6 +1409,29 @@
             justify-content: flex-start; }
   .no-flexbox .grid[g-lg~="halign:right"] {
     text-align: right; }
+  /* --- halign:justify --- */
+  .flexbox .grid[g-lg~="halign:justify"] {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .no-flexbox .grid[g-lg~="halign:justify"] {
+    text-align: justify; }
+  .no-flexbox .grid[g-lg~="halign:justify"]:after {
+    display: inline-block;
+    content: "";
+    width: 100%; }
+  /* --- halign:justify-center --- */
+  .flexbox .grid[g-lg~="halign:justify-center"] {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .no-flexbox .grid[g-lg~="halign:justify-center"] {
+    text-align: justify; }
+  .no-flexbox .grid[g-lg~="halign:justify-center"]:after {
+    display: inline-block;
+    content: "";
+    width: 100%; }
   /* ====== Vertical Align ====== */
   .flexbox .grid[g-lg~="valign:top"] {
     -webkit-box-align: start;

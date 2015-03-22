@@ -46,7 +46,37 @@
 		text-align: right;
 	}
 
-	//TODO: spacing - around, between, auto width and... offset?
+	/* --- halign:justify --- */
+
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify"] {
+		justify-content: space-between;
+	}
+
+	.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify"] {
+		text-align: justify;
+	}
+
+	.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify"]:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+	}
+
+	/* --- halign:justify-center --- */
+
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify-center"] {
+		justify-content: space-around;
+	}
+
+	.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify-center"] {
+		text-align: justify;
+	}
+
+	.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify-center"]:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+	}
 
 	/* ====== Vertical Align ====== */
 
