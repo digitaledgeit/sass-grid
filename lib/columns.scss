@@ -5,7 +5,17 @@
 //
 @mixin grid_columns($breakpoint) {
 
-	.flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="cols:auto"] {
+	.flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="cols:min"] {
+		width: auto;
+		flex-grow: 0;
+		flex-basis: auto;
+	}
+
+	.no-flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="cols:min"] {
+		width: auto;
+	}
+
+	.flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="cols:max"] {
 		width: auto;
 		flex-grow: 1;
 		flex-basis: auto;

@@ -46,20 +46,25 @@
 		text-align: right;
 	}
 
+	//TODO: spacing - around, between, auto width and... offset?
+
 	/* ====== Vertical Align ====== */
 
 	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:top"] {
-		justify-content: flex-start;
+		align-items: flex-start;
 	}
 
 	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:middle"] {
-		justify-content: center;
+		align-items: center;
 	}
 
 	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:bottom"] {
 		align-items: flex-end;
 	}
 
-	//TODO: spacing - around, between, auto width and... offset?
+	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:stretch"] {
+		align-items: stretch;
+	}
+
 
 }

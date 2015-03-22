@@ -11,6 +11,7 @@
         }
 
         .grid__unit {
+            padding: 0 1em;
             min-height: 3em;
             line-height: 3em;
             border: 1px solid #fff;
@@ -145,11 +146,12 @@
         </code>
 
         <span class="disclaimer">(Flexbox only)</span>
-        <p>Grid units can automatically fill the remaining space.</p>
+        <p>Grid units can be sized to take up no more room than their content, or sized to fill the remaining width of the grid.</p>
 
         <div class="grid">
             <div class="grid__unit" g-xs="cols:2">2</div>
-            <div class="grid__unit" g-xs="cols:auto">auto</div>
+            <div class="grid__unit" g-xs="cols:min">min</div>
+            <div class="grid__unit" g-xs="cols:max">max</div>
             <div class="grid__unit" g-xs="cols:3">3</div>
         </div>
 
@@ -157,7 +159,8 @@
             <pre>
               &lt;div class="grid">
                   &lt;div class="grid__unit" g-xs="cols:2">2&lt;/div>
-                  &lt;div class="grid__unit" g-xs="cols:auto">auto&lt;/div>
+                  &lt;div class="grid__unit" g-xs="cols:min">min&lt;/div>
+                &lt;div class="grid__unit" g-xs="cols:max">max&lt;/div>
                   &lt;div class="grid__unit" g-xs="cols:3">3&lt;/div>
                 &lt;/div>
             </pre>
@@ -242,6 +245,7 @@
         </section>
 
         <section>
+            <span class="disclaimer">(Some alignments only work with Flexbox)</span>
             <h3>Alignment</h3>
 
             <p>Horizontal.</p>
@@ -268,6 +272,42 @@
                 ...
             &lt;/div>
             &lt;div class="grid" g-xs="halign:right">
+                ...
+            &lt;/div>
+            </pre>
+            </code>
+
+            <p>Vertical.</p>
+
+            <div class="grid" g-xs="valign:top" style="min-height: 6em; margin-bottom: 1em; border: 1px dotted #ccc;">
+                <div class="grid__unit" g-xs="cols:6">align</div>
+                <div class="grid__unit" g-xs="cols:6">top</div>
+            </div>
+            <div class="grid" g-xs="valign:middle" style="min-height: 6em; margin-bottom: 1em; border: 1px dotted #ccc;">
+                <div class="grid__unit" g-xs="cols:6">align</div>
+                <div class="grid__unit" g-xs="cols:6">middle</div>
+            </div>
+            <div class="grid" g-xs="valign:bottom" style="min-height: 6em; margin-bottom: 1em; border: 1px dotted #ccc;">
+                <div class="grid__unit" g-xs="cols:6">align</div>
+                <div class="grid__unit" g-xs="cols:6">bottom</div>
+            </div>
+            <div class="grid" g-xs="valign:stretch" style="min-height: 10em; border: 1px dotted #ccc;">
+                <div class="grid__unit" g-xs="cols:6">align</div>
+                <div class="grid__unit" g-xs="cols:6">stretch</div>
+            </div>
+
+            <code>
+            <pre>
+            &lt;div class="grid" g-xs="halign:top">
+                ...
+            &lt;/div>
+            &lt;div class="grid" g-xs="halign:middle">
+                ...
+            &lt;/div>
+            &lt;div class="grid" g-xs="halign:bottom">
+                ...
+            &lt;/div>
+            &lt;div class="grid" g-xs="halign:stretch">
                 ...
             &lt;/div>
             </pre>
