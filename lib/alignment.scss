@@ -82,14 +82,17 @@
 
 	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:top"] {
 		align-items: flex-start;
+		vertical-align: top;
 	}
 
 	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:middle"] {
 		align-items: center;
+		vertical-align: middle;
 	}
 
 	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:bottom"] {
 		align-items: flex-end;
+		vertical-align: bottom;
 	}
 
 	.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="valign:stretch"] {
