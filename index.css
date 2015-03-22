@@ -195,14 +195,12 @@
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-            align-items: flex-start;
-    vertical-align: top; }
+            align-items: flex-start; }
   .flexbox .grid[g-xs~="valign:middle"] {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center;
-    vertical-align: middle; }
+            align-items: center; }
   .flexbox .grid[g-xs~="valign:bottom"] {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
@@ -612,14 +610,12 @@
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-            align-items: flex-start;
-    vertical-align: top; }
+            align-items: flex-start; }
   .flexbox .grid[g-sm~="valign:middle"] {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center;
-    vertical-align: middle; }
+            align-items: center; }
   .flexbox .grid[g-sm~="valign:bottom"] {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
@@ -1029,14 +1025,12 @@
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-            align-items: flex-start;
-    vertical-align: top; }
+            align-items: flex-start; }
   .flexbox .grid[g-md~="valign:middle"] {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center;
-    vertical-align: middle; }
+            align-items: center; }
   .flexbox .grid[g-md~="valign:bottom"] {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
@@ -1446,14 +1440,12 @@
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-            align-items: flex-start;
-    vertical-align: top; }
+            align-items: flex-start; }
   .flexbox .grid[g-lg~="valign:middle"] {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center;
-    vertical-align: middle; }
+            align-items: center; }
   .flexbox .grid[g-lg~="valign:bottom"] {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
