@@ -19,6 +19,6 @@
   },
   "scripts": {
     "build": "gulp"
-  }
+  },
   "license": "MIT"
 }

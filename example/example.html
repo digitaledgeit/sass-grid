@@ -348,15 +348,42 @@
         <h2>Generic utilities</h2>
 
         <section>
+            <h3>Visibility</h3>
+
+            <p>Other elements can be hidden or displayed.</p>
+
+            <div class="grid">
+                <div class="grid__unit">
+                    <span g-xs="display:inline" g-md="display:none">mobile</span>
+                    <span g-xs="display:none" g-md="display:inline" g-lg="display:none">tablet</span>
+                    <span g-xs="display:none" g-lg="display:inline">desktop</span>
+                </div>
+            </div>
+
+            <code>
+            <pre>
+            &lt;div class="grid">
+                &lt;div class="grid__unit">
+                    &lt;span g-xs="display:inline" g-md="display:none">mobile&lt;/span>
+                    &lt;span g-xs="display:none" g-md="display:inline" g-lg="display:none">tablet&lt;/span>
+                    &lt;span g-xs="display:none" g-lg="display:inline">desktop&lt;/span>
+                    &lt;/div>
+            &lt;/div>
+            </pre>
+            </code>
+
+        </section>
+
+        <section>
             <h3>Text</h3>
 
             <p>Text can be aligned differently at each breakpoint.</p>
 
             <div class="grid">
                 <div class="grid__unit" g-xs="text:left px1" g-md="text:center" g-lg="text:right">
-                    <span g-xs="visible" g-md="invisible">left</span>
-                    <span g-xs="invisible" g-md="visible" g-lg="invisible">center</span>
-                    <span g-xs="invisible" g-lg="visible" g-md="invisible">right</span>
+                    <span g-xs="display:inline" g-md="display:none">left</span>
+                    <span g-xs="display:none" g-md="display:inline" g-lg="display:none">center</span>
+                    <span g-xs="display:none" g-lg="display:inline">right</span>
                 </div>
             </div>
 
