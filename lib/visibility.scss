@@ -3,16 +3,13 @@
 
   // ---- grid units ----
 
-  .flexbox .grid_unit[#{$grid_prefix}#{$breakpoint}~="visible"] {
-    display: flex;
-  }
-
-  .no-flexbox .grid_unit[#{$grid_prefix}#{$breakpoint}~="visible"] {
+  .flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="visible"],
+  .no-flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="visible"] {
     display: inline-block;
   }
 
-  .flexbox .grid_unit[#{$grid_prefix}#{$breakpoint}~="invisible"],
-  .no-flexbox .grid_unit[#{$grid_prefix}#{$breakpoint}~="invisible"] {
+  .flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="invisible"],
+  .no-flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="invisible"] {
     display: none;
   }
 
