@@ -1,16 +1,35 @@
 
 @mixin grid_visibility($breakpoint) {
 
-  .flexbox [#{$grid_prefix}#{$breakpoint}~="visible"],
-  .no-flexbox [#{$grid_prefix}#{$breakpoint}~="visible"] {
+  // ---- grid units ----
+
+  .flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="visible"],
+  .no-flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="visible"] {
     display: inline-block;
   }
 
-	.flexbox [#{$grid_prefix}#{$breakpoint}~="invisible"],
-	.no-flexbox [#{$grid_prefix}#{$breakpoint}~="invisible"] {
+  .flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="invisible"],
+  .no-flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="invisible"] {
     display: none;
   }
 
-	//todo: Utils, not for grid but other elements - display:block, display:inline, display:inline-block
+  // ---- other elements ----
+
+  [#{$grid_prefix}#{$breakpoint}~="display:none"] {
+    display: none;
+  }
+
+  [#{$grid_prefix}#{$breakpoint}~="display:inline"] {
+    display: inline;
+  }
+
+  [#{$grid_prefix}#{$breakpoint}~="display:inline-block"] {
+    display: inline-block;
+  }
+
+  [#{$grid_prefix}#{$breakpoint}~="display:block"] {
+    display: block;
+  }
+
 
 }
