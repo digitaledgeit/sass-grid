@@ -2,7 +2,7 @@
 
 A responsive grid. 
 
-Uses flexbox and gracefully degrades to inline-blocks in older browsers.
+Uses `flexbox` and gracefully degrades in older browsers to use an `inline-block` grid.
 
 ## Installation
 
