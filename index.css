@@ -174,7 +174,8 @@
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .no-flexbox .grid[g-xs~="halign:justify"] {
-    text-align: justify; }
+    text-align: justify;
+    text-justify: distribute; }
   .no-flexbox .grid[g-xs~="halign:justify"]:after {
     display: inline-block;
     content: "";
@@ -185,7 +186,8 @@
         -ms-flex-pack: distribute;
             justify-content: space-around; }
   .no-flexbox .grid[g-xs~="halign:justify-center"] {
-    text-align: justify; }
+    text-align: justify;
+    text-justify: distribute; }
   .no-flexbox .grid[g-xs~="halign:justify-center"]:after {
     display: inline-block;
     content: "";
@@ -597,7 +599,8 @@
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .no-flexbox .grid[g-sm~="halign:justify"] {
-    text-align: justify; }
+    text-align: justify;
+    text-justify: distribute; }
   .no-flexbox .grid[g-sm~="halign:justify"]:after {
     display: inline-block;
     content: "";
@@ -608,7 +611,8 @@
         -ms-flex-pack: distribute;
             justify-content: space-around; }
   .no-flexbox .grid[g-sm~="halign:justify-center"] {
-    text-align: justify; }
+    text-align: justify;
+    text-justify: distribute; }
   .no-flexbox .grid[g-sm~="halign:justify-center"]:after {
     display: inline-block;
     content: "";
@@ -1020,7 +1024,8 @@
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .no-flexbox .grid[g-md~="halign:justify"] {
-    text-align: justify; }
+    text-align: justify;
+    text-justify: distribute; }
   .no-flexbox .grid[g-md~="halign:justify"]:after {
     display: inline-block;
     content: "";
@@ -1031,7 +1036,8 @@
         -ms-flex-pack: distribute;
             justify-content: space-around; }
   .no-flexbox .grid[g-md~="halign:justify-center"] {
-    text-align: justify; }
+    text-align: justify;
+    text-justify: distribute; }
   .no-flexbox .grid[g-md~="halign:justify-center"]:after {
     display: inline-block;
     content: "";
@@ -1443,7 +1449,8 @@
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .no-flexbox .grid[g-lg~="halign:justify"] {
-    text-align: justify; }
+    text-align: justify;
+    text-justify: distribute; }
   .no-flexbox .grid[g-lg~="halign:justify"]:after {
     display: inline-block;
     content: "";
@@ -1454,7 +1461,8 @@
         -ms-flex-pack: distribute;
             justify-content: space-around; }
   .no-flexbox .grid[g-lg~="halign:justify-center"] {
-    text-align: justify; }
+    text-align: justify;
+    text-justify: distribute; }
   .no-flexbox .grid[g-lg~="halign:justify-center"]:after {
     display: inline-block;
     content: "";
