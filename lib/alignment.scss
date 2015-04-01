@@ -54,6 +54,7 @@
 
 	.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify"] {
 		text-align: justify;
+		text-justify: distribute;
 	}
 
 	.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify"]:after {
@@ -70,6 +71,7 @@
 
 	.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify-center"] {
 		text-align: justify;
+		text-justify: distribute;
 	}
 
 	.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify-center"]:after {
