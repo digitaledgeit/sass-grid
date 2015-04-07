@@ -25,6 +25,7 @@
 
     .flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="cols:#{$i}"] {
       flex-basis: percentage($i/12);
+      max-width: percentage($i/12);
     }
 
 	  [#{$grid_prefix}#{$breakpoint}~="cols:#{$i}"],
