@@ -8,32 +8,42 @@
 @import "lib/text";
 @import "lib/visibility";
 
+// === Grid ===
+
+.grid {
+	box-sizing: border-box;
+}
+
 .flexbox .grid {
 	display: flex;
 	flex: 0 1 auto;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: flex-start;
-	box-sizing: border-box;
-}
-
-.flexbox .grid__unit {
-	width: 100%;
-	flex-basis: 100%;
-	box-sizing: border-box;
 }
 
 .no-flexbox .grid {
-  font-size: 0; //note: tried using letter-spacing like the current nib grid but it leaves inconsistent spacing between columns
+	font-size: 0; //note: I tried using letter-spacing like the current nib grid but it leaves inconsistent spacing between columns
+}
+
+// === Grid Unit ===
+
+.grid__unit {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.flexbox .grid__unit {
+	flex-basis: 100%;
 }
 
 .no-flexbox .grid__unit {
   display: inline-block;
-  box-sizing: border-box;
-  width: 100%;
   font-size: 1rem;
   vertical-align: top;
 }
+
+// === Grid Breakpoints ===
 
 @mixin grid_at($breakpoint) {
   @include grid_breakpoint($breakpoint) {
