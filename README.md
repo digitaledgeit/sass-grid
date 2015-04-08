@@ -43,9 +43,9 @@ Find more examples on the [example/example.html](http://digitaledgeit.github.io/
 ## Building your own grid
 
 1. Requires sass >=3.4
-2. Customise the settings in `config.scss`
+2. Customise the grid settings in `config.scss`
 3. Run `npm install`
-4. Run `gulp`
+4. Run `npm run build`
    
 ## Notes
 
@@ -55,9 +55,9 @@ Twelve is easily divisible by lots of numbers e.g. 2, 3, 4, 6
 ## TODO
 
 - Test IE
+- move margins and padding to another component
 - mixins
-- margins and padding. in another component?
-- offsets?
+- offsets? another component?
 - Provide a stylesheet for IE<=8 to provide the desktop equivalent?
 
 ## License

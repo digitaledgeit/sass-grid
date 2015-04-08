@@ -1,7 +1,6 @@
 {
 	"name": "grid",
 	"description": "A responsive grid.",
-	"main": "index.css",
-	"styles": ["index.css"],
+	"styles": ["dist/index.css"],
 	"license": "MIT"
 }
