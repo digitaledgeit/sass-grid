@@ -1,4 +1,3 @@
-@import "config";
 @import "node_modules/digitaledgeit-breakpoints/index";
 @import "src/mixins";
 @import "src/alignment";
@@ -6,6 +5,12 @@
 @import "src/ordering";
 @import "src/text";
 @import "src/visibility";
+
+
+$grid_prefix: "g-" !default;
+
+$grid_columns: 12 !default;
+
 
 // === Grid ===
 
