@@ -54,11 +54,9 @@ Twelve is easily divisible by lots of numbers e.g. 2, 3, 4, 6
 
 ## TODO
 
-- Test IE
 - move margins and padding to another component
 - mixins
-- offsets? another component?
-- Provide a stylesheet for IE<=8 to provide the desktop equivalent?
+- Provide a stylesheet for IE<=8 to provide a desktop equivalent (cause no media queries)?
 
 ## License
 

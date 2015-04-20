@@ -30,15 +30,16 @@
 
 .grid__unit {
 	box-sizing: border-box;
-	width: 100%;
 }
 
 .flexbox .grid__unit {
 	flex-basis: 100%;
+	max-width: 100%;
 }
 
 .no-flexbox .grid__unit {
   display: inline-block;
+  width: 100%;
   font-size: 1rem;
   vertical-align: top;
 }

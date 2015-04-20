@@ -39,6 +39,10 @@
     </style>
     <link rel="stylesheet" href="../dist/index.css"/>
 
+    <!--[if IE 9]>
+        <script src="https://cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.3/ie8.js"></script>
+    <![endif]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 </head>
@@ -405,7 +409,10 @@
 
     <section>
         <h2>Gotch-yas</h2>
-        <p>With the Inline-Block grid, the grid units' font size is reset to medium and does not inherit the font size from classes higher up. You need to apply styles.</p>
+        <ul>
+            <li>With the Inline-Block grid, the grid units' font size is reset to medium and does not inherit the font size from classes higher up. You need to apply styles.</li>
+            <li><a href="https://connect.microsoft.com/IE/feedback/details/802625/min-height-and-flexbox-flex-direction-column-dont-work-together-in-ie-10-11-preview">Vertical alignment in IE10-11</a></li>
+        </ul>
     </section>
 
     <script>
@@ -416,7 +423,7 @@
         ;
 
         gridTypeToggle.addEventListener('click', function(event) {
-            console.log('test');
+
             if (html.classList.contains('flexbox')) {
                 gridTypeToggle.innerText = 'Switch to Flexbox';
             } else {
@@ -431,7 +438,6 @@
         } else {
             gridTypeToggle.innerText = 'Switch to Flexbox';
         }
-
 
     </script>
 
