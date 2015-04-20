@@ -55,7 +55,6 @@
 
     //not really part of a grid - but very helpful
     @include grid_text($breakpoint);
-    @include grid_spacing($breakpoint);
 
   }
 }
