@@ -8,7 +8,7 @@ Uses `flexbox` and gracefully degrades in older browsers, supporting *most* of t
 
 ### Component
 
-    composer install digitaledgeit/css-grid
+    component install digitaledgeit/css-grid
     
 ### DuoJS
 
