@@ -1,7 +1,7 @@
 @import "config";
+@import "node_modules/digitaledgeit-breakpoints/index";
 @import "src/mixins";
 @import "src/alignment";
-@import "src/breakpoint";
 @import "src/columns";
 @import "src/ordering";
 @import "src/text";
@@ -46,7 +46,7 @@
 // === Grid Breakpoints ===
 
 @mixin grid_at($breakpoint) {
-  @include grid_breakpoint($breakpoint) {
+  @include named_breakpoint($breakpoint) {
 
     @include grid_columns($breakpoint);
     @include grid_alignment($breakpoint);

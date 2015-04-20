@@ -9,6 +9,9 @@
   "bugs": {
     "url": "https://github.com/digitaledgeit/css-grid/issues"
   },
+  "dependencies": {
+    "digitaledgeit-breakpoints": "^0.1.0",
+  },
   "devDependencies": {
     "autoprefixer": "^5.1.0",
     "node-sass": "^2.1.1"
