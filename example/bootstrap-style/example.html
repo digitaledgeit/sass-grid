@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="flexbox">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../dist/index.css"/>
+    <style>
+
+        [class*=col] {
+            text-align: center;
+            border: 1px solid #fff;
+            background-color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p>An example of generating Bootstrap like style names.</p>
+
+    <div class="row">
+        <div class="col-sm-3 col-xs-hidden col-sm-visible">
+            Left Column
+        </div>
+        <div class="col-sm-9 col-lg-6">
+            Middle Column
+
+            <h6>Reversed</h6>
+            <div class="row row-xs-center row-xs-reversed">
+                <div class="col-xs-1">A</div>
+                <div class="col-xs-1">B</div>
+                <div class="col-xs-1">C</div>
+                <div class="col-xs-1">D</div>
+                <div class="col-xs-1">E</div>
+                <div class="col-xs-1">F</div>
+            </div>
+
+            <h6>First and last swapped</h6>
+            <div class="row row-xs-center">
+                <div class="col-xs-1 col-sm-last">A</div>
+                <div class="col-xs-1">B</div>
+                <div class="col-xs-1">C</div>
+                <div class="col-xs-1">D</div>
+                <div class="col-xs-1">E</div>
+                <div class="col-xs-1 col-sm-first">F</div>
+            </div>
+
+        </div>
+        <div class="col-sm-12 col-lg-3">
+            Right Column
+        </div>
+    </div>
+
+</body>
+</html>

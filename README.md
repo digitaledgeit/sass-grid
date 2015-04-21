@@ -52,11 +52,16 @@ Find more examples on the [example/example.html](http://digitaledgeit.github.io/
 ### Why 12 columns? 
 Twelve is easily divisible by lots of numbers e.g. 2, 3, 4, 6
 
+### Why mixins over extends?
+
+https://tech.bellycard.com/blog/sass-mixins-vs-extends-the-data/
+
 ## TODO
 
 - move margins and padding to another component
 - mixins
 - Provide a stylesheet for IE<=8 to provide a desktop equivalent (cause no media queries)?
+
 
 ## License
 

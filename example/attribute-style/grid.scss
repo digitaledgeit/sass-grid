@@ -1,0 +1,52 @@
+@import "../../src/base";
+
+$grid_prefix: "g-" !default;
+
+
+@mixin static-grid-unit-ordering($attr) {
+
+	.grid__unit[#{$attr}~="order:first"] {
+		@include %grid__unit--order-first;
+	}
+
+	.grid__unit[#{$attr}~="order:last"] {
+		@include %grid-unit-order-last;
+	}
+
+}
+
+//
+/// Renders all the column widths for the specified breakpoint e.g. g-xs="cols:2"
+/// @param {String} $attr - The attribute name
+//
+@mixin static-grid-unit-cols($attr) {
+
+	.grid__unit[#{$attr}~="cols:min"] {
+		@include %grid__unit--cols-min;
+	}
+
+	.grid__unit[#{$attr}~="cols:max"] {
+		@include %grid__unit--cols-max;
+	}
+
+	@for $i from 1 through $grid_columns {
+
+		.grid__unit[#{$attr}~="cols:#{$i}"] {
+			@include %grid__unit--cols-#{$i};
+		}
+
+	}
+
+}
+
+@mixin static-grid-unit-visibility($attr) {
+
+	.grid__unit[#{$attr}~="visible"] {
+		@include %grid-unit-visible;
+	}
+
+	.grid__unit[#{$attr}~="invisible"] {
+		@include %grid-unit-invisible;
+	}
+
+}
