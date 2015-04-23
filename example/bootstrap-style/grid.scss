@@ -26,6 +26,14 @@
 		@include grid--halign-right(true);
 	}
 
+	.row-#{$breakpoint}-justify {
+		@include grid--halign-justify();
+	}
+
+	.row-#{$breakpoint}-justify-center {
+		@include grid--halign-justify-center();
+	}
+
 	// ------ Ordering -------
 
 	.row-#{$breakpoint}-reversed {

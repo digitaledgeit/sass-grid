@@ -18,9 +18,11 @@
   },
   "scripts": {
     "clean": "rm -rf ./dist && mkdir ./dist",
-    "compile": "node-sass --output-style expanded ./example/bootstrap-style/grid.scss ./dist/index.css",
+    "compile-bootstrap": "node-sass --output-style expanded ./example/bootstrap-style/grid.scss ./dist/index.css",
+    "compile-attribute": "node-sass --output-style expanded ./example/attribute-style/grid.scss ./dist/index.css",
+    "compile-semantic": "node-sass --output-style expanded ./example/semantic-style/grid.scss ./dist/index.css",
     "autoprefix": "autoprefixer ./dist/index.css",
-    "build": "npm run clean && npm run compile && npm run autoprefix"
+    "build": "npm run clean && npm run compile-attribute && npm run autoprefix"
   },
   "license": "MIT"
 }

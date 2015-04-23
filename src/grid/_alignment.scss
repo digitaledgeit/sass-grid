@@ -4,7 +4,7 @@ $breakpoint: '';
 /* ====== Horizontal Alignment ====== */
 
 //
-/// Align to the left horizontally
+/// Left align horizontally
 //
 @mixin grid--halign-left($reversed: false) {
 
@@ -44,7 +44,7 @@ $breakpoint: '';
 }
 
 //
-/// Align to the right horizontally
+/// Right align horizontally
 //
 @mixin grid--halign-right($reversed: false) {
 
@@ -68,50 +68,48 @@ $breakpoint: '';
 
 }
 
-.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:right"] {
-  justify-content: flex-end;
+//
+/// Justify horizontally
+//
+@mixin grid--halign-justify() {
+
+	.flexbox & {
+		justify-content: space-between;
+	}
+
+	.no-flexbox & {
+		text-align: justify;
+		text-justify: distribute;
+	}
+
+	.no-flexbox &:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+	}
+
 }
 
-.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:right"][#{$grid_prefix}#{$breakpoint}~="order:reverse"] {
-	justify-content: flex-start; //when the ordering is reversed, so is the alignment
-}
+//
+/// Justify horizontally
+//
+@mixin grid--halign-justify-center() {
 
-.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:right"] {
-	text-align: right;
-}
+	.flexbox & {
+		justify-content: space-around;
+	}
 
-/* --- halign:justify --- */
+	.no-flexbox & {
+		text-align: justify;
+		text-justify: distribute;
+	}
 
-.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify"] {
-	justify-content: space-between;
-}
+	.no-flexbox &:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+	}
 
-.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify"] {
-	text-align: justify;
-	text-justify: distribute;
-}
-
-.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify"]:after {
-	display: inline-block;
-	content: "";
-	width: 100%;
-}
-
-/* --- halign:justify-center --- */
-
-.flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify-center"] {
-	justify-content: space-around;
-}
-
-.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify-center"] {
-	text-align: justify;
-	text-justify: distribute;
-}
-
-.no-flexbox .grid[#{$grid_prefix}#{$breakpoint}~="halign:justify-center"]:after {
-	display: inline-block;
-	content: "";
-	width: 100%;
 }
 
 /* ====== Vertical Align ====== */
