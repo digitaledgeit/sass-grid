@@ -1,8 +1,9 @@
 {
-  "name": "css-grid",
-  "version": "1.1.3",
+  "name": "sass-grid",
+  "version": "1.1.4",
   "description": "A responsive grid.",
   "author": "James Newell",
+  "main.css": "dist/index.css",
   "repository": {
     "type": "git",
     "url": "git://github.com/digitaledgeit/css-grid.git"
