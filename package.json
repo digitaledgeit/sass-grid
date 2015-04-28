@@ -1,28 +1,22 @@
 {
-  "name": "css-grid",
+  "name": "sass-grid",
+  "version": "1.0.0",
+  "author": "James Newell <james@digitaledgeit.com.au>",
+  "keywords": ["grid", "rwd", "responsive", "flexbox", "sass", "libsass", "scss", "style", "npm", "import", "browserify"],
   "description": "A responsive grid.",
-  "author": "James Newell",
   "repository": {
     "type": "git",
-    "url": "git://github.com/digitaledgeit/css-grid.git"
+    "url": "git://github.com/digitaledgeit/sass-grid.git"
   },
   "bugs": {
-    "url": "https://github.com/digitaledgeit/css-grid/issues"
-  },
-  "dependencies": {
-    "digitaledgeit-breakpoints": "^0.1.0"
+    "url": "https://github.com/digitaledgeit/sass-grid/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^5.1.0",
-    "node-sass": "^2.1.1"
+    "sass-composer": "^0.2.0",
+    "sass-named-breakpoints": "^0.1.1"
   },
   "scripts": {
-    "clean": "rm -rf ./dist && mkdir ./dist",
-    "compile-bootstrap": "node-sass --output-style expanded ./example/bootstrap-style/grid.scss ./dist/index.css",
-    "compile-attribute": "node-sass --output-style expanded ./example/attribute-style/grid.scss ./dist/index.css",
-    "compile-semantic": "node-sass --output-style expanded ./example/semantic-style/grid.scss ./dist/index.css",
-    "autoprefix": "autoprefixer ./dist/index.css",
-    "build": "npm run clean && npm run compile-attribute && npm run autoprefix"
+    "build": "sass-composer ./compiled.scss -o ./dist/compiled.css"
   },
   "license": "MIT"
 }

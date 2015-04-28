@@ -1,4 +1,4 @@
-# grid
+# sass-grid
 
 A responsive grid. 
 
@@ -8,13 +8,13 @@ Uses `flexbox` and gracefully degrades in older browsers, supporting *most* of t
 
 ### Component
 
-    component install digitaledgeit/css-grid
+    component install sass-grid
     
 ### DuoJS
 
 In a stylesheet:
 
-    @import "digitaledgeit/css-grid";
+    @import "sass-grid";
    
 ## Usage
     
