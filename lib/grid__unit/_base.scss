@@ -28,8 +28,10 @@
 	@if $cols == 'min' {
 
 		.flexbox & {
-			flex-grow: 0;
-			flex-basis: auto;
+		  flex-grow: 0;
+		  flex-basis: auto;
+		  width: auto;
+		  max-width: none;
 		}
 
 		.no-flexbox & {
@@ -39,8 +41,10 @@
 	} @else if $cols == 'max' {
 
 		.flexbox & {
-			flex-grow: 1;
-			flex-basis: auto;
+		  flex-grow: 1;
+		  flex-basis: auto;
+		  width: auto;
+		  max-width: none;
 		}
 
 		.no-flexbox & {
