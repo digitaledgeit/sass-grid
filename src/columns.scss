@@ -6,9 +6,10 @@
 @mixin grid_columns($breakpoint) {
 
 	.flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="cols:min"] {
-	  	max-width: none;
 		flex-grow: 0;
 		flex-basis: auto;
+		width: auto;
+		max-width: none;
 	}
 
 	.no-flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="cols:min"] {
@@ -16,9 +17,10 @@
 	}
 
 	.flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="cols:max"] {
-		max-width: none;
 		flex-grow: 1;
 		flex-basis: auto;
+		width: auto;
+		max-width: none;
 	}
 
 	@for $i from 1 through $grid_columns {
@@ -28,7 +30,7 @@
 			max-width: percentage($i/12);
 		}
 
-		[#{$grid_prefix}#{$breakpoint}~="cols:#{$i}"],
+	  	.flexbox [#{$grid_prefix}#{$breakpoint}~="cols:#{$i}"],
 		.no-flexbox [#{$grid_prefix}#{$breakpoint}~="cols:#{$i}"] {
 			width: percentage($i/12);
 		}
