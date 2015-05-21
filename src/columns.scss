@@ -6,7 +6,7 @@
 @mixin grid_columns($breakpoint) {
 
 	.flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="cols:min"] {
-	  	max-width: fit-content;
+	  	max-width: none;
 		flex-grow: 0;
 		flex-basis: auto;
 	}
@@ -16,7 +16,7 @@
 	}
 
 	.flexbox .grid__unit[#{$grid_prefix}#{$breakpoint}~="cols:max"] {
-		width: auto;
+		max-width: none;
 		flex-grow: 1;
 		flex-basis: auto;
 	}
