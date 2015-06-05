@@ -1,0 +1,159 @@
+$grid_prefix: 'g-';
+$breakpoint: '';
+
+// ====== Horizontal Alignment ======
+
+//
+/// Left align horizontally
+//
+@mixin grid--halign-left($reversed: false) {
+
+	@if not $reversed {
+
+		.flexbox & {
+			justify-content: flex-start;
+		}
+
+	} @else {
+
+		.flexbox & {
+			justify-content: flex-end; //when the ordering is reversed, so is the alignment
+		}
+
+	}
+
+	.no-flexbox & {
+		text-align: left;
+	}
+
+}
+
+//
+/// Center horizontally
+//
+@mixin grid--halign-center() {
+
+	.flexbox & {
+		justify-content: center;
+	}
+
+	.no-flexbox & {
+		text-align: center;
+	}
+
+}
+
+//
+/// Right align horizontally
+//
+@mixin grid--halign-right($reversed: false) {
+
+	@if not $reversed {
+
+		.flexbox & {
+			justify-content: flex-end;
+		}
+
+	} @else {
+
+		.flexbox & {
+			justify-content: flex-start; //when the ordering is reversed, so is the alignment
+		}
+
+	}
+
+	.no-flexbox & {
+		text-align: right;
+	}
+
+}
+
+//
+/// Justify horizontally
+//
+@mixin grid--halign-justify() {
+
+	.flexbox & {
+		justify-content: space-between;
+	}
+
+	.no-flexbox & {
+		text-align: justify;
+		text-justify: distribute;
+	}
+
+	.no-flexbox &:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+	}
+
+}
+
+//
+/// Justify horizontally
+//
+@mixin grid--halign-justify-center() {
+
+	.flexbox & {
+		justify-content: space-around;
+	}
+
+	.no-flexbox & {
+		text-align: justify;
+		text-justify: distribute;
+	}
+
+	.no-flexbox &:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+	}
+
+}
+
+// ====== Vertical Align ======
+
+//
+/// Align top
+//
+@mixin grid--valign-top() {
+
+  .flexbox & {
+    align-items: flex-start;
+  }
+
+}
+
+//
+/// Align middle
+//
+@mixin grid--valign-middle() {
+
+  .flexbox & {
+    align-items: center;
+  }
+
+}
+
+//
+/// Align bottom
+//
+@mixin grid--valign-bottom() {
+
+  .flexbox & {
+    align-items: flex-end;
+  }
+
+}
+
+//
+/// Align bottom
+//
+@mixin grid--valign-stretch() {
+
+  .flexbox & {
+    align-items: stretch;
+  }
+
+}

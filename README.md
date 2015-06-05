@@ -1,4 +1,4 @@
-# grid
+# sass-grid
 
 A responsive grid. 
 
@@ -6,26 +6,70 @@ Uses `flexbox` and gracefully degrades in older browsers, supporting *most* of t
 
 ## Installation
 
+### Browserify
+
+    npm install --save sass-grid
+
 ### Component
 
-    component install digitaledgeit/css-grid
+    component install sass-grid
     
-### DuoJS
-
-In a stylesheet:
-
-    @import "digitaledgeit/css-grid";
+**Note**: You are limited to using the compiled version.
    
 ## Usage
+    
+### Using mixins
+
+CSS:
+
+    @import "sass-grid"
+    @import "sass-named-breakpoints";
+    
+    .feature-panel {
+      @include grid();
+      @include grid--halign-justify-center()
+    }
+    
+    .feature-panel__feature {
+      @include grid__unit();
+      
+      @include named_breakpoint('md') {
+        @include grid__unit--cols(3);
+      }
+      
+    }
+
+HTML:
     
     <html class="flexbox"><!-- you'll probably use Modernizr and won't need to manually put this class here --!>
     ...
     
-        <div class="grid">
-            <div class="grid__unit" g-xs="cols:12" g-sm="cols:6">100% for extra-small devices but 50% for all other devices</div>
-            <div class="grid__unit" g-xs="invisible" g-sm="cols:3 visible">hidden on extra-small devices but 25% for all other devices</div>
-            <div class="grid__unit" g-xs="invisible" g-sm="cols:2 visible">hidden on extra-small devices but 16% for all other devices</div>
-            <div class="grid__unit" g-xs="invisible" g-sm="cols:1 visible">hidden on extra-small devices but 8% for all other devices</div>
+        <div class="feature-panel">
+            <div class="feature-panel__feature">Does stuff</div>
+            <div class="feature-panel__feature">Does more stuff</div>
+            <div class="feature-panel__feature">Does even more stuff</div>
+            <div class="feature-panel__feature">It just does all the stuff!</div>
+        </div>
+        
+    ...
+    </html>
+    
+### Using a compiled grid
+
+CSS:
+
+    @import "sass-grid/dist/compiled"
+        
+HTML:
+    
+    <html class="flexbox"><!-- you'll probably use Modernizr and won't need to manually put this class here --!>
+    ...
+    
+        <div class="grid" g-xs="halign:justify-center">
+            <div class="grid__unit" g-md="cols:3">Does stuff</div>
+            <div class="grid__unit" g-md="cols:3">Does more stuff</div>
+            <div class="grid__unit" g-md="cols:3">Does even more stuff</div>
+            <div class="grid__unit" g-md="cols:3">It just does all the stuff!</div>
         </div>
         
     ...
@@ -35,10 +79,7 @@ Find more examples on the [example/example.html](http://digitaledgeit.github.io/
 
 ## Breakpoints
 
- - xs - target devices >=0px
- - sm - target devices >=569px
- - md - target devices >=769px
- - lg - target devices >=1004px
+See [sass-named-breakpoints](https://www.npmjs.com/package/sass-named-breakpoints).
 
 ## Building your own grid
 
@@ -52,11 +93,13 @@ Find more examples on the [example/example.html](http://digitaledgeit.github.io/
 ### Why 12 columns? 
 Twelve is easily divisible by lots of numbers e.g. 2, 3, 4, 6
 
-## TODO
+### Why mixins over extends?
 
-- move margins and padding to another component
-- mixins
-- Provide a stylesheet for IE<=8 to provide a desktop equivalent (cause no media queries)?
+https://tech.bellycard.com/blog/sass-mixins-vs-extends-the-data/
+
+### Other responsive utils
+
+Checkout [sass-named-breakpoints](https://www.npmjs.com/package/sass-named-breakpoints) and [sass-spacing](https://www.npmjs.com/package/sass-spacing).
 
 ## License
 

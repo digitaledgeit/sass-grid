@@ -1,0 +1,94 @@
+
+@mixin grid__unit() {
+
+	box-sizing: border-box;
+
+	.flexbox & {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+
+	.no-flexbox & {
+	  display: inline-block;
+	  width: 100%;
+	  font-size: 1rem;
+	  vertical-align: top;
+	}
+
+}
+
+// ------ Columns -------
+
+//
+/// Span a number of columns
+/// @param {number} $cols - The number of columns
+//
+@mixin grid__unit--cols($cols) {
+
+	@if $cols == 'min' {
+
+		.flexbox & {
+		  flex-grow: 0;
+		  flex-basis: auto;
+		  width: auto;
+		  max-width: none;
+		}
+
+		.no-flexbox & {
+			width: auto;
+		}
+
+	} @else if $cols == 'max' {
+
+		.flexbox & {
+		  flex-grow: 1;
+		  flex-basis: auto;
+		  width: auto;
+		  max-width: none;
+		}
+
+		.no-flexbox & {
+			width: 100%;
+		}
+
+	} @else {
+
+		.flexbox & {
+			flex-basis: percentage($cols/$grid_columns);
+			max-width: percentage($cols/$grid_columns);
+		}
+
+		.no-flexbox & {
+			width: percentage($cols/$grid_columns);
+		}
+
+	}
+
+}
+
+// ------ Visibility -------
+
+@mixin grid__unit--visible() {
+	.flexbox &,
+	.no-flexbox & {
+		display: inline-block; //todo: maybe this shouldn't be inline block for .flexbox .grid__unit's
+	}
+}
+
+@mixin grid__unit--invisible() {
+	.flexbox &,
+	.no-flexbox & {
+		display: none;
+	}
+}
+
+// ------ Ordering -------
+
+@mixin grid__unit--order-first() {
+	order: -1;
+}
+
+@mixin grid__unit--order-last() {
+	order: 12;
+}
+

@@ -1,0 +1,35 @@
+
+@mixin grid() {
+
+	box-sizing: border-box;
+
+	.flexbox & {
+		display: flex;
+		flex: 0 1 auto;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+	.no-flexbox & {
+		font-size: 0; //note: I tried using letter-spacing like the current nib grid but it leaves inconsistent spacing between columns
+	}
+
+}
+
+// ------ Alignment -------
+
+@import "./_alignment";
+
+// ------ Ordering -------
+
+//
+/// Reverse the order of the grid units contained by the grid
+//
+@mixin grid--order-reverse() {
+
+	.flexbox & {
+		flex-direction: row-reverse;
+	}
+
+}

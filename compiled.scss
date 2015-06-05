@@ -1,0 +1,166 @@
+@import "sass-named-breakpoints";
+@import "./index";
+
+$grid_prefix: "g-" !default;
+
+@function grid-attr($breakpoint) {
+	@return "#{$grid_prefix}#{$breakpoint}";
+}
+
+// ======= Grid styles =======
+
+@mixin attribute-grid($breakpoint) {
+	$attr: grid-attr($breakpoint);
+
+	// ------ Horizontal alignment -------
+
+	.grid[#{$attr}~="halign:left"] {
+		@include grid--halign-left();
+	}
+
+	//fixme: what if it was centered and reveresed at diffrent breakpoints? this won't work - need to iterate each breakpoint with each breakpoint?
+	.grid[#{$attr}~="halign:left"].grid__unit[#{$attr}~="order:reversed"] {
+		@include grid--halign-left(true);
+	}
+
+	.grid[#{$attr}~="halign:center"] {
+		@include grid--halign-center();
+	}
+
+	.grid[#{$attr}~="halign:right"] {
+		@include grid--halign-right();
+	}
+
+  .grid[#{$attr}~="halign:right"].grid__unit[#{$attr}~="order:reversed"] { //fixme: what if it was centered and reveresed at diffrent breakpoints? this won't work - need to iterate each breakpoint with each breakpoint?
+		@include grid--halign-right(true);
+	}
+
+  .grid[#{$attr}~="halign:justify"] {
+		@include grid--halign-justify();
+	}
+
+  .grid[#{$attr}~="halign:justify-center"] {
+		@include grid--halign-justify-center();
+	}
+
+  // ------ Vertical alignment -------
+
+  .grid[#{$attr}~="valign:top"] {
+    @include grid--valign-top();
+  }
+
+  .grid[#{$attr}~="valign:middle"] {
+    @include grid--valign-middle();
+  }
+
+  .grid[#{$attr}~="valign:bottom"] {
+    @include grid--valign-bottom();
+  }
+
+  .grid[#{$attr}~="valign:stretch"] {
+    @include grid--valign-stretch();
+  }
+
+  // ------ Ordering -------
+
+  .grid[#{$attr}~="order:reverse"] {
+		@include grid--order-reverse();
+	}
+
+}
+
+// ======= Grid Unit =======
+
+@mixin attribute-grid-unit($breakpoint) {
+
+	// ------ Columns -------
+
+  .grid__unit[#{grid-attr($breakpoint)}~="cols:min"] {
+    @include grid__unit--cols('min');
+  }
+
+  .grid__unit[#{grid-attr($breakpoint)}~="cols:max"] {
+    @include grid__unit--cols('max');
+  }
+
+	@for $i from 1 through $grid_columns {
+
+    .grid__unit[#{grid-attr($breakpoint)}~="cols:#{$i}"] {
+			@include grid__unit--cols($i);
+		}
+
+	}
+
+	// ------ Visibility -------
+
+	.grid__unit[#{grid-attr($breakpoint)}~="visible"] {
+		@include grid__unit--visible();
+	}
+
+	.grid__unit[#{grid-attr($breakpoint)}~="invisible"] {
+		@include grid__unit--invisible();
+	}
+
+	// ------ Ordering -------
+
+	.grid__unit[#{grid-attr($breakpoint)}~="order:first"] {
+		@include grid__unit--order-first();
+	}
+
+	.grid__unit[#{grid-attr($breakpoint)}~="order:last"] {
+		@include grid__unit--order-last();
+	}
+
+}
+
+.grid {
+	@include grid();
+}
+
+.grid__unit {
+	@include grid__unit();
+}
+
+//repeat styles for each breakpoint
+@each $breakpoint, $px in $named_breakpoints {
+	@include named_breakpoint($breakpoint) {
+
+		@include attribute-grid($breakpoint);
+		@include attribute-grid-unit($breakpoint);
+
+    //TODO: move to their own solution
+
+    // ------ Text alignment -------
+
+    [#{grid-attr($breakpoint)}~="text:left"] {
+      text-align: left;
+    }
+
+    [#{grid-attr($breakpoint)}~="text:center"] {
+      text-align: center;
+    }
+
+    [#{grid-attr($breakpoint)}~="text:right"] {
+      text-align: right;
+    }
+
+    // ------ Element visibility -------
+
+    [#{$grid_prefix}#{$breakpoint}~="display:none"] {
+      display: none;
+    }
+
+    [#{$grid_prefix}#{$breakpoint}~="display:inline"] {
+      display: inline;
+    }
+
+    [#{$grid_prefix}#{$breakpoint}~="display:inline-block"] {
+      display: inline-block;
+    }
+
+    [#{$grid_prefix}#{$breakpoint}~="display:block"] {
+      display: block;
+    }
+
+  }
+}
