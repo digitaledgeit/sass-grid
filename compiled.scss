@@ -1,4 +1,4 @@
-@import "sass-named-breakpoints";
+@import "sass-breakpoints";
 @import "./index";
 
 $grid_prefix: "g-" !default;
@@ -122,8 +122,8 @@ $grid_prefix: "g-" !default;
 }
 
 //repeat styles for each breakpoint
-@each $breakpoint, $px in $named_breakpoints {
-	@include named_breakpoint($breakpoint) {
+@each $breakpoint, $px in $breakpoints {
+	@include breakpoint($breakpoint) {
 
 		@include attribute-grid($breakpoint);
 		@include attribute-grid-unit($breakpoint);

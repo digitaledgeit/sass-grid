@@ -4,12 +4,3 @@ $grid_columns: 12 !default;
 
 //$grid_fallback_inlineblock: true !default;
 //$grid_fallback_mediaqueries: false !default;
-
-//
-/// Convert EMs to pixels
-/// @param {} $px 	- The value (in pixels) to convert to ems
-/// @param {} $base	- The base font size
-//
-@function em($px, $base: 16px) {
-  @return ($px / $base) * 1em;
-}

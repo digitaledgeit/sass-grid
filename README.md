@@ -1,6 +1,6 @@
 # sass-grid
 
-A responsive grid. 
+A responsive grid built on flexbox. 
 
 Uses `flexbox` and gracefully degrades in older browsers, supporting *most* of the same functionality using an `inline-block` grid.
 

@@ -168,7 +168,7 @@
   [g-xs~="display:block"] {
     display: block; } }
 
-@media (min-width: 35.5625em) {
+@media (min-width: 35.5em) {
   .flexbox .grid[g-sm~="halign:left"] {
     justify-content: flex-start; }
   .no-flexbox .grid[g-sm~="halign:left"] {
