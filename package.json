@@ -18,7 +18,7 @@
     "sass-composer": "2.0.0-beta6"
   },
   "scripts": {
-    "build": "sass-composer ./compiled.scss -o ./dist/compiled.css"
+    "build": "sass-composer ./compiled.scss -o ./dist/compiled.css && autoprefixer ./dist/compiled.css"
   },
   "license": "MIT"
 }
