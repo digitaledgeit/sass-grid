@@ -75,7 +75,7 @@ HTML:
     ...
     </html>
 
-Find more examples on the [example/example.html](http://digitaledgeit.github.io/css-grid/example/example.html) page.
+Find more examples on the [example/example.html](http://digitaledgeit.github.io/sass-grid/example/example.html) page.
 
 ## Breakpoints
 
