@@ -20,7 +20,7 @@
     font-size: 1rem;
     vertical-align: top; }
 
-@media (min-width: 0em) {
+@media (min-width: 0) {
   .flexbox .grid[g-xs~="halign:left"] {
     justify-content: flex-start; }
   .no-flexbox .grid[g-xs~="halign:left"] {
