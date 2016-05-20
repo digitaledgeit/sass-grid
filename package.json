@@ -2,7 +2,19 @@
   "name": "sass-grid",
   "version": "2.0.3",
   "description": "A responsive grid built on flexbox.",
-  "keywords": ["grid", "rwd", "responsive", "flexbox", "sass", "libsass", "scss", "style", "npm", "import", "sass-composer"],
+  "keywords": [
+    "grid",
+    "rwd",
+    "responsive",
+    "flexbox",
+    "sass",
+    "libsass",
+    "scss",
+    "style",
+    "npm",
+    "import",
+    "sass-composer"
+  ],
   "author": "James Newell",
   "repository": {
     "type": "git",
@@ -15,7 +27,7 @@
     "sass-breakpoints": "^1.0.0"
   },
   "devDependencies": {
-    "sass-composer": "2.0.0-beta6"
+    "sass-composer": "^2.0.0-beta16"
   },
   "scripts": {
     "build": "sass-composer ./compiled.scss -o ./dist/compiled.css"
