@@ -1,47 +1,48 @@
 @import "sass-breakpoints";
 @import "./index";
 
-$grid_prefix: "g-" !default;
+$grid-breakpoint-attribute-prefix: "u-" !default;
 
 @function grid-attr($breakpoint) {
-	@return "#{$grid_prefix}#{$breakpoint}";
+  @return "#{$grid-breakpoint-attribute-prefix}#{$breakpoint}";
 }
 
 // ======= Grid styles =======
 
 @mixin attribute-grid($breakpoint) {
-	$attr: grid-attr($breakpoint);
+  $attr: grid-attr($breakpoint);
 
-	// ------ Horizontal alignment -------
+  // ------ Horizontal alignment -------
 
-	.grid[#{$attr}~="halign:left"] {
-		@include grid--halign-left();
-	}
+  .grid[#{$attr}~="halign:left"] {
+    @include grid--halign-left();
+  }
 
-	//fixme: what if it was centered and reveresed at diffrent breakpoints? this won't work - need to iterate each breakpoint with each breakpoint?
-	.grid[#{$attr}~="halign:left"].grid__unit[#{$attr}~="order:reversed"] {
-		@include grid--halign-left(true);
-	}
+  //fixme: what if it was centered and reversed at different breakpoints? this won't work - need to iterate each breakpoint with each breakpoint?
+  .grid[#{$attr}~="halign:left"].grid__unit[#{$attr}~="order:reversed"] {
+    @include grid--halign-left(true);
+  }
 
-	.grid[#{$attr}~="halign:center"] {
-		@include grid--halign-center();
-	}
+  .grid[#{$attr}~="halign:center"] {
+    @include grid--halign-center();
+  }
 
-	.grid[#{$attr}~="halign:right"] {
-		@include grid--halign-right();
-	}
+  .grid[#{$attr}~="halign:right"] {
+    @include grid--halign-right();
+  }
 
-  .grid[#{$attr}~="halign:right"].grid__unit[#{$attr}~="order:reversed"] { //fixme: what if it was centered and reveresed at diffrent breakpoints? this won't work - need to iterate each breakpoint with each breakpoint?
-		@include grid--halign-right(true);
-	}
+  //fixme: what if it was centered and reversed at different breakpoints? this won't work - need to iterate each breakpoint with each breakpoint?
+  .grid[#{$attr}~="halign:right"].grid__unit[#{$attr}~="order:reversed"] {
+    @include grid--halign-right(true);
+  }
 
   .grid[#{$attr}~="halign:justify"] {
-		@include grid--halign-justify();
-	}
+    @include grid--halign-justify();
+  }
 
   .grid[#{$attr}~="halign:justify-center"] {
-		@include grid--halign-justify-center();
-	}
+    @include grid--halign-justify-center();
+  }
 
   // ------ Vertical alignment -------
 
@@ -64,8 +65,8 @@ $grid_prefix: "g-" !default;
   // ------ Ordering -------
 
   .grid[#{$attr}~="order:reverse"] {
-		@include grid--order-reverse();
-	}
+    @include grid--order-reverse();
+  }
 
 }
 
@@ -73,7 +74,7 @@ $grid_prefix: "g-" !default;
 
 @mixin attribute-grid-unit($breakpoint) {
 
-	// ------ Columns -------
+  // ------ Columns -------
 
   .grid__unit[#{grid-attr($breakpoint)}~="cols:min"] {
     @include grid__unit--cols('min');
@@ -83,50 +84,50 @@ $grid_prefix: "g-" !default;
     @include grid__unit--cols('max');
   }
 
-	@for $i from 1 through $grid_columns {
+  @for $i from 1 through $grid_columns {
 
     .grid__unit[#{grid-attr($breakpoint)}~="cols:#{$i}"] {
-			@include grid__unit--cols($i);
-		}
+      @include grid__unit--cols($i);
+    }
 
-	}
+  }
 
-	// ------ Visibility -------
+  // ------ Visibility -------
 
-	.grid__unit[#{grid-attr($breakpoint)}~="visible"] {
-		@include grid__unit--visible();
-	}
+  .grid__unit[#{grid-attr($breakpoint)}~="visible"] {
+    @include grid__unit--visible();
+  }
 
-	.grid__unit[#{grid-attr($breakpoint)}~="invisible"] {
-		@include grid__unit--invisible();
-	}
+  .grid__unit[#{grid-attr($breakpoint)}~="invisible"] {
+    @include grid__unit--invisible();
+  }
 
-	// ------ Ordering -------
+  // ------ Ordering -------
 
-	.grid__unit[#{grid-attr($breakpoint)}~="order:first"] {
-		@include grid__unit--order-first();
-	}
+  .grid__unit[#{grid-attr($breakpoint)}~="order:first"] {
+    @include grid__unit--order-first();
+  }
 
-	.grid__unit[#{grid-attr($breakpoint)}~="order:last"] {
-		@include grid__unit--order-last();
-	}
+  .grid__unit[#{grid-attr($breakpoint)}~="order:last"] {
+    @include grid__unit--order-last();
+  }
 
 }
 
 .grid {
-	@include grid();
+  @include grid();
 }
 
 .grid__unit {
-	@include grid__unit();
+  @include grid__unit();
 }
 
 //repeat styles for each breakpoint
 @each $breakpoint, $px in $breakpoints {
-	@include breakpoint($breakpoint) {
+  @include breakpoint($breakpoint) {
 
-		@include attribute-grid($breakpoint);
-		@include attribute-grid-unit($breakpoint);
+    @include attribute-grid($breakpoint);
+    @include attribute-grid-unit($breakpoint);
 
     //TODO: move to their own solution
 
@@ -146,19 +147,19 @@ $grid_prefix: "g-" !default;
 
     // ------ Element visibility -------
 
-    [#{$grid_prefix}#{$breakpoint}~="display:none"] {
+    [#{$grid-breakpoint-attribute-prefix}#{$breakpoint}~="display:none"] {
       display: none;
     }
 
-    [#{$grid_prefix}#{$breakpoint}~="display:inline"] {
+    [#{$grid-breakpoint-attribute-prefix}#{$breakpoint}~="display:inline"] {
       display: inline;
     }
 
-    [#{$grid_prefix}#{$breakpoint}~="display:inline-block"] {
+    [#{$grid-breakpoint-attribute-prefix}#{$breakpoint}~="display:inline-block"] {
       display: inline-block;
     }
 
-    [#{$grid_prefix}#{$breakpoint}~="display:block"] {
+    [#{$grid-breakpoint-attribute-prefix}#{$breakpoint}~="display:block"] {
       display: block;
     }
 

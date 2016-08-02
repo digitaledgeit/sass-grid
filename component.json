@@ -1,6 +1,0 @@
-{
-	"name": "sass-grid",
-	"description": "A responsive grid.",
-	"styles": ["dist/compiled.css"],
-	"license": "MIT"
-}

@@ -1,4 +1,3 @@
-
 // ====== Horizontal Alignment ======
 
 //
@@ -6,23 +5,23 @@
 //
 @mixin grid--halign-left($reversed: false) {
 
-	@if not $reversed {
+  @if not $reversed {
 
-		.flexbox & {
-			justify-content: flex-start;
-		}
+    .flexbox & {
+      justify-content: flex-start;
+    }
 
-	} @else {
+  } @else {
 
-		.flexbox & {
-			justify-content: flex-end; //when the ordering is reversed, so is the alignment
-		}
+    .flexbox & {
+      justify-content: flex-end; //when the ordering is reversed, so is the alignment
+    }
 
-	}
+  }
 
-	.no-flexbox & {
-		text-align: left;
-	}
+  .no-flexbox & {
+    text-align: left;
+  }
 
 }
 
@@ -31,13 +30,13 @@
 //
 @mixin grid--halign-center() {
 
-	.flexbox & {
-		justify-content: center;
-	}
+  .flexbox & {
+    justify-content: center;
+  }
 
-	.no-flexbox & {
-		text-align: center;
-	}
+  .no-flexbox & {
+    text-align: center;
+  }
 
 }
 
@@ -46,23 +45,23 @@
 //
 @mixin grid--halign-right($reversed: false) {
 
-	@if not $reversed {
+  @if not $reversed {
 
-		.flexbox & {
-			justify-content: flex-end;
-		}
+    .flexbox & {
+      justify-content: flex-end;
+    }
 
-	} @else {
+  } @else {
 
-		.flexbox & {
-			justify-content: flex-start; //when the ordering is reversed, so is the alignment
-		}
+    .flexbox & {
+      justify-content: flex-start; //when the ordering is reversed, so is the alignment
+    }
 
-	}
+  }
 
-	.no-flexbox & {
-		text-align: right;
-	}
+  .no-flexbox & {
+    text-align: right;
+  }
 
 }
 
@@ -71,20 +70,20 @@
 //
 @mixin grid--halign-justify() {
 
-	.flexbox & {
-		justify-content: space-between;
-	}
+  .flexbox & {
+    justify-content: space-between;
+  }
 
-	.no-flexbox & {
-		text-align: justify;
-		text-justify: distribute;
-	}
+  .no-flexbox & {
+    text-align: justify;
+    text-justify: distribute;
+  }
 
-	.no-flexbox &:after {
-		display: inline-block;
-		content: "";
-		width: 100%;
-	}
+  .no-flexbox &:after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+  }
 
 }
 
@@ -93,20 +92,20 @@
 //
 @mixin grid--halign-justify-center() {
 
-	.flexbox & {
-		justify-content: space-around;
-	}
+  .flexbox & {
+    justify-content: space-around;
+  }
 
-	.no-flexbox & {
-		text-align: justify;
-		text-justify: distribute;
-	}
+  .no-flexbox & {
+    text-align: justify;
+    text-justify: distribute;
+  }
 
-	.no-flexbox &:after {
-		display: inline-block;
-		content: "";
-		width: 100%;
-	}
+  .no-flexbox &:after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+  }
 
 }
 
