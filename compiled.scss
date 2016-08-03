@@ -118,6 +118,12 @@ $grid-breakpoint-attribute-prefix: "u-" !default;
   @include grid();
 }
 
+.grid--vertical {
+  height: 100%;
+  flex-wrap: nowrap !important;
+  flex-direction: column !important;
+}
+
 .grid__unit {
   @include grid__unit();
 }
@@ -129,37 +135,39 @@ $grid-breakpoint-attribute-prefix: "u-" !default;
     @include attribute-grid($breakpoint);
     @include attribute-grid-unit($breakpoint);
 
-    //TODO: move to their own solution
+    $attr: grid-attr($breakpoint);
+
+    //TODO: move these utils to their own solution
 
     // ------ Text alignment -------
 
-    [#{grid-attr($breakpoint)}~="text:left"] {
+    [#{$attr}~="text:left"] {
       text-align: left;
     }
 
-    [#{grid-attr($breakpoint)}~="text:center"] {
+    [#{$attr}~="text:center"] {
       text-align: center;
     }
 
-    [#{grid-attr($breakpoint)}~="text:right"] {
+    [#{$attr}~="text:right"] {
       text-align: right;
     }
 
     // ------ Element visibility -------
 
-    [#{$grid-breakpoint-attribute-prefix}#{$breakpoint}~="display:none"] {
+    [#{$attr}~="display:none"] {
       display: none;
     }
 
-    [#{$grid-breakpoint-attribute-prefix}#{$breakpoint}~="display:inline"] {
+    [#{$attr}~="display:inline"] {
       display: inline;
     }
 
-    [#{$grid-breakpoint-attribute-prefix}#{$breakpoint}~="display:inline-block"] {
+    [#{$attr}~="display:inline-block"] {
       display: inline-block;
     }
 
-    [#{$grid-breakpoint-attribute-prefix}#{$breakpoint}~="display:block"] {
+    [#{$attr}~="display:block"] {
       display: block;
     }
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>CSS Grid &mdash; Example</title>
+  <meta name=viewport content="width=device-width, initial-scale=1"/>
+  <style>
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .u-full-height {
+      height: 100%;
+    }
+
+    header,
+    aside,
+    article,
+    footer {
+      padding: 1em;
+    }
+
+    header {
+      background-color: #dae5ff;
+    }
+
+    aside {
+      background-color: #bfb3cc;
+    }
+
+    article {
+      background-color: #cccccc;
+    }
+
+    footer {
+      background-color: #cc9f75;
+    }
+
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <link rel="stylesheet" href="../dist/compiled.css"/>
+
+</head>
+<body>
+
+  <div class="grid grid--vertical">
+
+    <div class="grid__unit" u-xs="cols:min">
+      <header>Header</header>
+    </div>
+
+    <div class="grid__unit">
+
+      <div class="grid u-full-height">
+        <div class="grid__unit" u-xs="cols:min">
+          <aside class="u-full-height">Aside</aside>
+        </div>
+        <div class="grid__unit" u-xs="cols:max">
+          <article class="u-full-height">Body</article>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid__unit" u-xs="cols:min">
+      <footer>Footer</footer>
+    </div>
+
+  </div>
+
+</body>
+</html>

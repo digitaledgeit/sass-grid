@@ -30,6 +30,7 @@
     "sass-composer": "^2.0.0-beta16"
   },
   "scripts": {
+    "clean": "rm -rf ./dist && mkdir ./dist",
     "build": "sass-composer ./compiled.scss -o ./dist/compiled.css"
   },
   "license": "MIT"
