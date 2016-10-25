@@ -32,3 +32,14 @@
   }
 
 }
+
+//
+/// Preven wrapping of the grid units contained by the grid
+//
+@mixin grid--wrap-nowrap() {
+
+  .flexbox & {
+    flex-wrap: nowrap;
+  }
+
+}

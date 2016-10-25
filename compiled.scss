@@ -68,6 +68,12 @@ $grid-breakpoint-attribute-prefix: "u-" !default;
     @include grid--order-reverse();
   }
 
+  // ------ Wrapping -------
+
+  .grid[#{$attr}~="wrap:nowrap"] {
+    @include grid--wrap-nowrap();
+  }
+
 }
 
 // ======= Grid Unit =======
