@@ -70,8 +70,16 @@ $grid-breakpoint-attribute-prefix: "u-" !default;
 
   // ------ Wrapping -------
 
+  .grid[#{$attr}~="wrap:wrap"] {
+    @include grid--wrap-wrap();
+  }
+
   .grid[#{$attr}~="wrap:nowrap"] {
     @include grid--wrap-nowrap();
+  }
+
+  .grid[#{$attr}~="wrap:wrap-reverse"] {
+    @include grid--wrap-wrap-reverse();
   }
 
 }
