@@ -1,6 +1,6 @@
 {
   "name": "sass-grid",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "A responsive grid built on flexbox.",
   "keywords": [
     "grid",
