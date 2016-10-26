@@ -32,3 +32,36 @@
   }
 
 }
+
+//
+/// Enable wrapping of the grid units contained by the grid (this is default)
+//
+@mixin grid--wrap-wrap() {
+
+  .flexbox & {
+    flex-wrap: wrap;
+  }
+
+}
+
+//
+/// Prevent wrapping of the grid units contained by the grid
+//
+@mixin grid--wrap-nowrap() {
+
+  .flexbox & {
+    flex-wrap: nowrap;
+  }
+
+}
+
+//
+/// Enable wrapping of the grid units contained by the grid
+//
+@mixin grid--wrap-wrap-reverse() {
+
+  .flexbox & {
+    flex-wrap: wrap-reverse;
+  }
+
+}
