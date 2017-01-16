@@ -58,18 +58,18 @@ HTML:
 
 CSS:
 
-    @import "sass-grid/dist/compiled"
+    @import "sass-grid/index.css"
 
 HTML:
 
     <html class="flexbox"><!-- you'll probably use Modernizr and won't need to manually put this class here --!>
     ...
 
-        <div class="grid" u-xs="halign:justify-center">
-            <div class="grid__unit" u-md="cols:3">Does stuff</div>
-            <div class="grid__unit" u-md="cols:3">Does more stuff</div>
-            <div class="grid__unit" u-md="cols:3">Does even more stuff</div>
-            <div class="grid__unit" u-md="cols:3">It just does all the stuff!</div>
+        <div class="grid grid--halign:justify-center">
+            <div class="grid__unit grid__unit--cols:3">Does stuff</div>
+            <div class="grid__unit grid__unit--cols:3">Does more stuff</div>
+            <div class="grid__unit grid__unit--cols:3">Does even more stuff</div>
+            <div class="grid__unit grid__unit--cols:3">It just does all the stuff!</div>
         </div>
 
     ...
@@ -79,7 +79,7 @@ Find more examples on the [example/example.html](http://digitaledgeit.github.io/
 
 ## Breakpoints
 
-See [sass-named-breakpoints](https://www.npmjs.com/package/sass-named-breakpoints).
+See [sass-breakpoints](https://www.npmjs.com/package/sass-breakpoints).
 
 ## Building your own grid
 
@@ -99,7 +99,7 @@ https://tech.bellycard.com/blog/sass-mixins-vs-extends-the-data/
 
 ### Other responsive utils
 
-Checkout [sass-named-breakpoints](https://www.npmjs.com/package/sass-named-breakpoints) and [sass-spacing](https://www.npmjs.com/package/sass-spacing).
+Checkout [sass-breakpoints](https://www.npmjs.com/package/sass-breakpoints) and [sass-spacing](https://www.npmjs.com/package/sass-spacing).
 
 ## License
 

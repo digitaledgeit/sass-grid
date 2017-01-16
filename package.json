@@ -15,6 +15,7 @@
     "import",
     "sass-composer"
   ],
+  "main.scss": "mixins.scss",
   "author": "James Newell",
   "repository": {
     "type": "git",
@@ -24,13 +25,14 @@
     "url": "https://github.com/digitaledgeit/sass-grid/issues"
   },
   "dependencies": {
-    "sass-breakpoints": "^1.0.0"
+    "sass-breakpoints": "^2.1.0"
   },
   "devDependencies": {
-    "sass-composer": "^2.0.0-beta16"
+    "node-sass": "^4.3.0"
   },
   "scripts": {
-    "build": "sass-composer ./compiled.scss -o ./dist/compiled.css"
+    "build": "node-sass --include-path node_modules ./classes.scss > ./index.css",
+    "prepublish": "npm run build"
   },
   "license": "MIT"
 }

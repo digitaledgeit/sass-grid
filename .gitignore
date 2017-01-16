@@ -1,5 +1,3 @@
-.sass-cache
 .idea
-build
-components
+index.css
 node_modules
